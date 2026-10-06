@@ -1,0 +1,2588 @@
+.
+├── aclocal.m4
+├── add_guards.py
+├── AUTHORS
+├── autom4te.cache
+│   ├── output.0
+│   ├── output.1
+│   ├── output.2
+│   ├── output.3
+│   ├── output.4
+│   ├── output.5
+│   ├── requests
+│   ├── traces.0
+│   ├── traces.1
+│   ├── traces.2
+│   ├── traces.3
+│   ├── traces.4
+│   └── traces.5
+├── autoscan.log
+├── build
+│   ├── bin
+│   │   ├── atlas.ppm
+│   │   ├── engine
+│   │   ├── fonts
+│   │   │   ├── NotoSansArabic-Regular.ttf
+│   │   │   ├── NotoSans-BoldItalic.ttf
+│   │   │   ├── NotoSans-Bold.ttf
+│   │   │   ├── NotoSansCJK-Medium.ttc
+│   │   │   ├── NotoSansHebrew-Regular.ttf
+│   │   │   ├── NotoSans-Italic.ttf
+│   │   │   ├── NotoSans-Regular.ttf
+│   │   │   ├── sazanami-gothic.ttf
+│   │   │   └── TerminusTTF.ttf
+│   │   ├── frag.spv
+│   │   ├── softbody.frag.spv
+│   │   ├── softbody.shadow.vert.spv
+│   │   ├── softbody.vert.spv
+│   │   ├── sphere.frag.spv
+│   │   ├── sphere.vert.spv
+│   │   ├── teapot.obj
+│   │   ├── text.frag.spv
+│   │   ├── texture.png
+│   │   ├── text.vert.spv
+│   │   ├── vert.spv
+│   │   ├── voxel_raymarch.shadow.frag.spv
+│   │   ├── voxel_raymarch.shadow.vert.spv
+│   │   ├── widget.frag.spv
+│   │   ├── widget.vert.spv
+│   │   ├── wireframe.frag.spv
+│   │   └── wireframe.vert.spv
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.31.6
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeConfigureLog.yaml
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeRuleHashes.txt
+│   │   ├── FindOpenMP
+│   │   │   ├── ompver_C.bin
+│   │   │   └── ompver_CXX.bin
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── pkgRedirects
+│   │   ├── Progress
+│   │   │   ├── 11
+│   │   │   ├── 17
+│   │   │   ├── 18
+│   │   │   ├── 19
+│   │   │   ├── 20
+│   │   │   ├── 21
+│   │   │   ├── 22
+│   │   │   ├── 23
+│   │   │   ├── 24
+│   │   │   ├── 25
+│   │   │   ├── 26
+│   │   │   ├── 27
+│   │   │   ├── 28
+│   │   │   ├── 29
+│   │   │   ├── 30
+│   │   │   ├── 31
+│   │   │   ├── 32
+│   │   │   ├── 33
+│   │   │   ├── 34
+│   │   │   ├── 35
+│   │   │   ├── 36
+│   │   │   ├── 37
+│   │   │   ├── 38
+│   │   │   ├── 39
+│   │   │   ├── 40
+│   │   │   ├── 41
+│   │   │   ├── 42
+│   │   │   ├── 43
+│   │   │   ├── 44
+│   │   │   ├── 45
+│   │   │   ├── 46
+│   │   │   ├── 47
+│   │   │   ├── 48
+│   │   │   ├── 49
+│   │   │   ├── 50
+│   │   │   ├── 51
+│   │   │   ├── 52
+│   │   │   ├── 53
+│   │   │   ├── 54
+│   │   │   ├── 55
+│   │   │   ├── 56
+│   │   │   ├── 57
+│   │   │   ├── 58
+│   │   │   ├── 59
+│   │   │   ├── 60
+│   │   │   ├── 61
+│   │   │   ├── 62
+│   │   │   ├── 63
+│   │   │   ├── 64
+│   │   │   ├── 65
+│   │   │   ├── 66
+│   │   │   ├── 67
+│   │   │   ├── 68
+│   │   │   ├── 69
+│   │   │   ├── 70
+│   │   │   ├── 71
+│   │   │   ├── 72
+│   │   │   ├── 73
+│   │   │   ├── 74
+│   │   │   ├── 75
+│   │   │   ├── 76
+│   │   │   ├── 77
+│   │   │   ├── 78
+│   │   │   ├── 79
+│   │   │   ├── 80
+│   │   │   ├── 81
+│   │   │   ├── 82
+│   │   │   ├── 83
+│   │   │   ├── 84
+│   │   │   ├── 85
+│   │   │   ├── 86
+│   │   │   ├── 87
+│   │   │   ├── 88
+│   │   │   ├── 89
+│   │   │   ├── 90
+│   │   │   ├── 91
+│   │   │   ├── 92
+│   │   │   ├── 93
+│   │   │   ├── 94
+│   │   │   ├── 95
+│   │   │   ├── 96
+│   │   │   ├── 97
+│   │   │   ├── 98
+│   │   │   ├── 99
+│   │   │   └── count.txt
+│   │   ├── progress.marks
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   ├── compile_commands.json
+│   ├── CPackConfig.cmake
+│   ├── CPackSourceConfig.cmake
+│   ├── lib
+│   │   ├── fast_obj
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── fast_obj_lib.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── fast_obj.c.o
+│   │   │   │   │   ├── fast_obj.c.o.d
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   └── progress.make
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   └── Makefile
+│   │   ├── freetype
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── Export
+│   │   │   │   │   └── 778b4f54a68e80ec034bf381f364ca2c
+│   │   │   │   │       ├── freetype-config.cmake
+│   │   │   │   │       └── freetype-config-debug.cmake
+│   │   │   │   ├── freetype.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── builds
+│   │   │   │   │   │   └── unix
+│   │   │   │   │   │       ├── ftsystem.c.o
+│   │   │   │   │   │       └── ftsystem.c.o.d
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── cmake_clean_target.cmake
+│   │   │   │   │   ├── compiler_depend.internal
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── autofit
+│   │   │   │   │       │   ├── autofit.c.o
+│   │   │   │   │       │   └── autofit.c.o.d
+│   │   │   │   │       ├── base
+│   │   │   │   │       │   ├── ftbase.c.o
+│   │   │   │   │       │   ├── ftbase.c.o.d
+│   │   │   │   │       │   ├── ftbbox.c.o
+│   │   │   │   │       │   ├── ftbbox.c.o.d
+│   │   │   │   │       │   ├── ftbdf.c.o
+│   │   │   │   │       │   ├── ftbdf.c.o.d
+│   │   │   │   │       │   ├── ftbitmap.c.o
+│   │   │   │   │       │   ├── ftbitmap.c.o.d
+│   │   │   │   │       │   ├── ftcid.c.o
+│   │   │   │   │       │   ├── ftcid.c.o.d
+│   │   │   │   │       │   ├── ftdebug.c.o
+│   │   │   │   │       │   ├── ftdebug.c.o.d
+│   │   │   │   │       │   ├── ftfstype.c.o
+│   │   │   │   │       │   ├── ftfstype.c.o.d
+│   │   │   │   │       │   ├── ftgasp.c.o
+│   │   │   │   │       │   ├── ftgasp.c.o.d
+│   │   │   │   │       │   ├── ftglyph.c.o
+│   │   │   │   │       │   ├── ftglyph.c.o.d
+│   │   │   │   │       │   ├── ftgxval.c.o
+│   │   │   │   │       │   ├── ftgxval.c.o.d
+│   │   │   │   │       │   ├── ftinit.c.o
+│   │   │   │   │       │   ├── ftinit.c.o.d
+│   │   │   │   │       │   ├── ftmm.c.o
+│   │   │   │   │       │   ├── ftmm.c.o.d
+│   │   │   │   │       │   ├── ftotval.c.o
+│   │   │   │   │       │   ├── ftotval.c.o.d
+│   │   │   │   │       │   ├── ftpatent.c.o
+│   │   │   │   │       │   ├── ftpatent.c.o.d
+│   │   │   │   │       │   ├── ftpfr.c.o
+│   │   │   │   │       │   ├── ftpfr.c.o.d
+│   │   │   │   │       │   ├── ftstroke.c.o
+│   │   │   │   │       │   ├── ftstroke.c.o.d
+│   │   │   │   │       │   ├── ftsynth.c.o
+│   │   │   │   │       │   ├── ftsynth.c.o.d
+│   │   │   │   │       │   ├── fttype1.c.o
+│   │   │   │   │       │   ├── fttype1.c.o.d
+│   │   │   │   │       │   ├── ftwinfnt.c.o
+│   │   │   │   │       │   └── ftwinfnt.c.o.d
+│   │   │   │   │       ├── bdf
+│   │   │   │   │       │   ├── bdf.c.o
+│   │   │   │   │       │   └── bdf.c.o.d
+│   │   │   │   │       ├── bzip2
+│   │   │   │   │       │   ├── ftbzip2.c.o
+│   │   │   │   │       │   └── ftbzip2.c.o.d
+│   │   │   │   │       ├── cache
+│   │   │   │   │       │   ├── ftcache.c.o
+│   │   │   │   │       │   └── ftcache.c.o.d
+│   │   │   │   │       ├── cff
+│   │   │   │   │       │   ├── cff.c.o
+│   │   │   │   │       │   └── cff.c.o.d
+│   │   │   │   │       ├── cid
+│   │   │   │   │       │   ├── type1cid.c.o
+│   │   │   │   │       │   └── type1cid.c.o.d
+│   │   │   │   │       ├── gzip
+│   │   │   │   │       │   ├── ftgzip.c.o
+│   │   │   │   │       │   └── ftgzip.c.o.d
+│   │   │   │   │       ├── hvf
+│   │   │   │   │       │   ├── hvf.c.o
+│   │   │   │   │       │   └── hvf.c.o.d
+│   │   │   │   │       ├── lzw
+│   │   │   │   │       │   ├── ftlzw.c.o
+│   │   │   │   │       │   └── ftlzw.c.o.d
+│   │   │   │   │       ├── pcf
+│   │   │   │   │       │   ├── pcf.c.o
+│   │   │   │   │       │   └── pcf.c.o.d
+│   │   │   │   │       ├── pfr
+│   │   │   │   │       │   ├── pfr.c.o
+│   │   │   │   │       │   └── pfr.c.o.d
+│   │   │   │   │       ├── psaux
+│   │   │   │   │       │   ├── psaux.c.o
+│   │   │   │   │       │   └── psaux.c.o.d
+│   │   │   │   │       ├── pshinter
+│   │   │   │   │       │   ├── pshinter.c.o
+│   │   │   │   │       │   └── pshinter.c.o.d
+│   │   │   │   │       ├── psnames
+│   │   │   │   │       │   ├── psnames.c.o
+│   │   │   │   │       │   └── psnames.c.o.d
+│   │   │   │   │       ├── raster
+│   │   │   │   │       │   ├── raster.c.o
+│   │   │   │   │       │   └── raster.c.o.d
+│   │   │   │   │       ├── sdf
+│   │   │   │   │       │   ├── sdf.c.o
+│   │   │   │   │       │   └── sdf.c.o.d
+│   │   │   │   │       ├── sfnt
+│   │   │   │   │       │   ├── sfnt.c.o
+│   │   │   │   │       │   └── sfnt.c.o.d
+│   │   │   │   │       ├── smooth
+│   │   │   │   │       │   ├── smooth.c.o
+│   │   │   │   │       │   └── smooth.c.o.d
+│   │   │   │   │       ├── svg
+│   │   │   │   │       │   ├── svg.c.o
+│   │   │   │   │       │   └── svg.c.o.d
+│   │   │   │   │       ├── truetype
+│   │   │   │   │       │   ├── truetype.c.o
+│   │   │   │   │       │   └── truetype.c.o.d
+│   │   │   │   │       ├── type1
+│   │   │   │   │       │   ├── type1.c.o
+│   │   │   │   │       │   └── type1.c.o.d
+│   │   │   │   │       ├── type42
+│   │   │   │   │       │   ├── type42.c.o
+│   │   │   │   │       │   └── type42.c.o.d
+│   │   │   │   │       └── winfonts
+│   │   │   │   │           ├── winfnt.c.o
+│   │   │   │   │           └── winfnt.c.o.d
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── freetype2.pc
+│   │   │   ├── freetype-config-version.cmake
+│   │   │   ├── include
+│   │   │   │   └── freetype
+│   │   │   │       └── config
+│   │   │   │           ├── ftconfig.h
+│   │   │   │           └── ftoption.h
+│   │   │   └── Makefile
+│   │   ├── glfw
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── Export
+│   │   │   │   │   └── f367bd07922f2ecfc14cf5547f1f7c4e
+│   │   │   │   │       ├── glfw3Targets.cmake
+│   │   │   │   │       └── glfw3Targets-debug.cmake
+│   │   │   │   ├── progress.marks
+│   │   │   │   └── uninstall.dir
+│   │   │   │       ├── build.make
+│   │   │   │       ├── cmake_clean.cmake
+│   │   │   │       ├── compiler_depend.make
+│   │   │   │       ├── compiler_depend.ts
+│   │   │   │       ├── DependInfo.cmake
+│   │   │   │       └── progress.make
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── cmake_uninstall.cmake
+│   │   │   ├── Makefile
+│   │   │   └── src
+│   │   │       ├── CMakeFiles
+│   │   │       │   ├── CMakeDirectoryInformation.cmake
+│   │   │       │   ├── glfw.dir
+│   │   │       │   │   ├── build.make
+│   │   │       │   │   ├── cmake_clean.cmake
+│   │   │       │   │   ├── cmake_clean_target.cmake
+│   │   │       │   │   ├── compiler_depend.internal
+│   │   │       │   │   ├── compiler_depend.make
+│   │   │       │   │   ├── compiler_depend.ts
+│   │   │       │   │   ├── context.c.o
+│   │   │       │   │   ├── context.c.o.d
+│   │   │       │   │   ├── DependInfo.cmake
+│   │   │       │   │   ├── depend.make
+│   │   │       │   │   ├── egl_context.c.o
+│   │   │       │   │   ├── egl_context.c.o.d
+│   │   │       │   │   ├── flags.make
+│   │   │       │   │   ├── glx_context.c.o
+│   │   │       │   │   ├── glx_context.c.o.d
+│   │   │       │   │   ├── init.c.o
+│   │   │       │   │   ├── init.c.o.d
+│   │   │       │   │   ├── input.c.o
+│   │   │       │   │   ├── input.c.o.d
+│   │   │       │   │   ├── link.txt
+│   │   │       │   │   ├── linux_joystick.c.o
+│   │   │       │   │   ├── linux_joystick.c.o.d
+│   │   │       │   │   ├── monitor.c.o
+│   │   │       │   │   ├── monitor.c.o.d
+│   │   │       │   │   ├── null_init.c.o
+│   │   │       │   │   ├── null_init.c.o.d
+│   │   │       │   │   ├── null_joystick.c.o
+│   │   │       │   │   ├── null_joystick.c.o.d
+│   │   │       │   │   ├── null_monitor.c.o
+│   │   │       │   │   ├── null_monitor.c.o.d
+│   │   │       │   │   ├── null_window.c.o
+│   │   │       │   │   ├── null_window.c.o.d
+│   │   │       │   │   ├── osmesa_context.c.o
+│   │   │       │   │   ├── osmesa_context.c.o.d
+│   │   │       │   │   ├── platform.c.o
+│   │   │       │   │   ├── platform.c.o.d
+│   │   │       │   │   ├── posix_module.c.o
+│   │   │       │   │   ├── posix_module.c.o.d
+│   │   │       │   │   ├── posix_poll.c.o
+│   │   │       │   │   ├── posix_poll.c.o.d
+│   │   │       │   │   ├── posix_thread.c.o
+│   │   │       │   │   ├── posix_thread.c.o.d
+│   │   │       │   │   ├── posix_time.c.o
+│   │   │       │   │   ├── posix_time.c.o.d
+│   │   │       │   │   ├── progress.make
+│   │   │       │   │   ├── vulkan.c.o
+│   │   │       │   │   ├── vulkan.c.o.d
+│   │   │       │   │   ├── window.c.o
+│   │   │       │   │   ├── window.c.o.d
+│   │   │       │   │   ├── wl_init.c.o
+│   │   │       │   │   ├── wl_init.c.o.d
+│   │   │       │   │   ├── wl_monitor.c.o
+│   │   │       │   │   ├── wl_monitor.c.o.d
+│   │   │       │   │   ├── wl_window.c.o
+│   │   │       │   │   ├── wl_window.c.o.d
+│   │   │       │   │   ├── x11_init.c.o
+│   │   │       │   │   ├── x11_init.c.o.d
+│   │   │       │   │   ├── x11_monitor.c.o
+│   │   │       │   │   ├── x11_monitor.c.o.d
+│   │   │       │   │   ├── x11_window.c.o
+│   │   │       │   │   ├── x11_window.c.o.d
+│   │   │       │   │   ├── xkb_unicode.c.o
+│   │   │       │   │   └── xkb_unicode.c.o.d
+│   │   │       │   ├── progress.marks
+│   │   │       │   └── update_mappings.dir
+│   │   │       │       ├── build.make
+│   │   │       │       ├── cmake_clean.cmake
+│   │   │       │       ├── compiler_depend.make
+│   │   │       │       ├── compiler_depend.ts
+│   │   │       │       ├── DependInfo.cmake
+│   │   │       │       └── progress.make
+│   │   │       ├── cmake_install.cmake
+│   │   │       ├── fractional-scale-v1-client-protocol-code.h
+│   │   │       ├── fractional-scale-v1-client-protocol.h
+│   │   │       ├── glfw3Config.cmake
+│   │   │       ├── glfw3ConfigVersion.cmake
+│   │   │       ├── glfw3.pc
+│   │   │       ├── idle-inhibit-unstable-v1-client-protocol-code.h
+│   │   │       ├── idle-inhibit-unstable-v1-client-protocol.h
+│   │   │       ├── Makefile
+│   │   │       ├── pointer-constraints-unstable-v1-client-protocol-code.h
+│   │   │       ├── pointer-constraints-unstable-v1-client-protocol.h
+│   │   │       ├── relative-pointer-unstable-v1-client-protocol-code.h
+│   │   │       ├── relative-pointer-unstable-v1-client-protocol.h
+│   │   │       ├── viewporter-client-protocol-code.h
+│   │   │       ├── viewporter-client-protocol.h
+│   │   │       ├── wayland-client-protocol-code.h
+│   │   │       ├── wayland-client-protocol.h
+│   │   │       ├── xdg-activation-v1-client-protocol-code.h
+│   │   │       ├── xdg-activation-v1-client-protocol.h
+│   │   │       ├── xdg-decoration-unstable-v1-client-protocol-code.h
+│   │   │       ├── xdg-decoration-unstable-v1-client-protocol.h
+│   │   │       ├── xdg-shell-client-protocol-code.h
+│   │   │       └── xdg-shell-client-protocol.h
+│   │   ├── libfast_obj_lib.a
+│   │   ├── libfreetyped.a
+│   │   ├── libgame.a
+│   │   └── libglfw3.a
+│   ├── Makefile
+│   ├── output.txt
+│   └── src
+│       ├── CMakeFiles
+│       │   ├── CMakeDirectoryInformation.cmake
+│       │   └── progress.marks
+│       ├── cmake_install.cmake
+│       ├── engine
+│       │   ├── CMakeFiles
+│       │   │   ├── CMakeDirectoryInformation.cmake
+│       │   │   ├── engine.dir
+│       │   │   │   ├── build.make
+│       │   │   │   ├── cmake_clean.cmake
+│       │   │   │   ├── compiler_depend.internal
+│       │   │   │   ├── compiler_depend.make
+│       │   │   │   ├── compiler_depend.ts
+│       │   │   │   ├── DependInfo.cmake
+│       │   │   │   ├── depend.make
+│       │   │   │   ├── engine.c.o
+│       │   │   │   ├── engine.c.o.d
+│       │   │   │   ├── event
+│       │   │   │   │   ├── event.c.o
+│       │   │   │   │   └── event.c.o.d
+│       │   │   │   ├── flags.make
+│       │   │   │   ├── gfx
+│       │   │   │   │   ├── gfx.c.o
+│       │   │   │   │   ├── gfx.c.o.d
+│       │   │   │   │   ├── vk_device.c.o
+│       │   │   │   │   ├── vk_device.c.o.d
+│       │   │   │   │   ├── vk_instance.c.o
+│       │   │   │   │   ├── vk_instance.c.o.d
+│       │   │   │   │   ├── vk_swapchain.c.o
+│       │   │   │   │   ├── vk_swapchain.c.o.d
+│       │   │   │   │   ├── vk_util.c.o
+│       │   │   │   │   ├── vk_util.c.o.d
+│       │   │   │   │   ├── vma.cpp.o
+│       │   │   │   │   └── vma.cpp.o.d
+│       │   │   │   ├── handle
+│       │   │   │   │   ├── handle.c.o
+│       │   │   │   │   └── handle.c.o.d
+│       │   │   │   ├── link.d
+│       │   │   │   ├── link.txt
+│       │   │   │   ├── log
+│       │   │   │   │   ├── log.c.o
+│       │   │   │   │   └── log.c.o.d
+│       │   │   │   ├── mem
+│       │   │   │   │   ├── sysmem.c.o
+│       │   │   │   │   └── sysmem.c.o.d
+│       │   │   │   ├── progress.make
+│       │   │   │   ├── res
+│       │   │   │   │   ├── res.c.o
+│       │   │   │   │   └── res.c.o.d
+│       │   │   │   ├── sphere
+│       │   │   │   │   ├── icosahedron.c.o
+│       │   │   │   │   ├── icosahedron.c.o.d
+│       │   │   │   │   ├── icosphere.c.o
+│       │   │   │   │   ├── icosphere.c.o.d
+│       │   │   │   │   ├── sphere_renderer.c.o
+│       │   │   │   │   └── sphere_renderer.c.o.d
+│       │   │   │   ├── text
+│       │   │   │   │   ├── text_block.c.o
+│       │   │   │   │   ├── text_block.c.o.d
+│       │   │   │   │   ├── text_engine.c.o
+│       │   │   │   │   ├── text_engine.c.o.d
+│       │   │   │   │   ├── text_geometry.c.o
+│       │   │   │   │   ├── text_geometry.c.o.d
+│       │   │   │   │   ├── text_renderer.c.o
+│       │   │   │   │   └── text_renderer.c.o.d
+│       │   │   │   ├── util
+│       │   │   │   │   ├── file.c.o
+│       │   │   │   │   ├── file.c.o.d
+│       │   │   │   │   ├── ppm.c.o
+│       │   │   │   │   └── ppm.c.o.d
+│       │   │   │   ├── widget
+│       │   │   │   │   ├── widget_renderer.c.o
+│       │   │   │   │   └── widget_renderer.c.o.d
+│       │   │   │   └── win
+│       │   │   │       ├── win.c.o
+│       │   │   │       └── win.c.o.d
+│       │   │   └── progress.marks
+│       │   ├── cmake_install.cmake
+│       │   └── Makefile
+│       ├── game
+│       │   ├── CMakeFiles
+│       │   │   ├── CMakeDirectoryInformation.cmake
+│       │   │   ├── game.dir
+│       │   │   │   ├── build.make
+│       │   │   │   ├── cmake_clean.cmake
+│       │   │   │   ├── cmake_clean_target.cmake
+│       │   │   │   ├── compiler_depend.internal
+│       │   │   │   ├── compiler_depend.make
+│       │   │   │   ├── compiler_depend.ts
+│       │   │   │   ├── DependInfo.cmake
+│       │   │   │   ├── depend.make
+│       │   │   │   ├── flags.make
+│       │   │   │   ├── freecam.c.o
+│       │   │   │   ├── freecam.c.o.d
+│       │   │   │   ├── input.c.o
+│       │   │   │   ├── input.c.o.d
+│       │   │   │   ├── link.txt
+│       │   │   │   ├── main.c.o
+│       │   │   │   ├── main.c.o.d
+│       │   │   │   ├── progress.make
+│       │   │   │   ├── softbody
+│       │   │   │   │   ├── phash.c.o
+│       │   │   │   │   ├── phash.c.o.d
+│       │   │   │   │   ├── sbm.c.o
+│       │   │   │   │   ├── sbm.c.o.d
+│       │   │   │   │   ├── softbody.c.o
+│       │   │   │   │   ├── softbody.c.o.d
+│       │   │   │   │   ├── softbody_renderer.c.o
+│       │   │   │   │   ├── softbody_renderer.c.o.d
+│       │   │   │   │   ├── wireframe_renderer.c.o
+│       │   │   │   │   └── wireframe_renderer.c.o.d
+│       │   │   │   ├── teapot
+│       │   │   │   │   ├── teapot.c.o
+│       │   │   │   │   └── teapot.c.o.d
+│       │   │   │   ├── term.c.o
+│       │   │   │   └── term.c.o.d
+│       │   │   └── progress.marks
+│       │   ├── cmake_install.cmake
+│       │   └── Makefile
+│       └── Makefile
+├── build.sh
+├── ChangeLog
+├── CMakeCache.txt
+├── CMakeFiles
+│   ├── 3.31.6
+│   │   ├── CMakeCCompiler.cmake
+│   │   ├── CMakeCXXCompiler.cmake
+│   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   ├── CMakeSystem.cmake
+│   │   ├── CompilerIdC
+│   │   │   ├── a.out
+│   │   │   ├── CMakeCCompilerId.c
+│   │   │   └── tmp
+│   │   └── CompilerIdCXX
+│   │       ├── a.out
+│   │       ├── CMakeCXXCompilerId.cpp
+│   │       └── tmp
+│   ├── cmake.check_cache
+│   ├── CMakeConfigureLog.yaml
+│   ├── FindOpenMP
+│   │   ├── ompver_C.bin
+│   │   └── ompver_CXX.bin
+│   └── pkgRedirects
+├── CMakeLists.txt
+├── compile
+├── config.guess
+├── config.h
+├── config.h.in
+├── config.h.in~
+├── config.log
+├── config.status
+├── config.sub
+├── configure
+├── configure~
+├── configure.ac
+├── configure.scan
+├── COPYING
+├── debug.sh
+├── depcomp
+├── engine
+│   ├── event
+│   ├── gfx
+│   │   ├── softbody
+│   │   └── teapot
+│   ├── handle
+│   ├── log
+│   ├── mem
+│   ├── res
+│   ├── sphere
+│   ├── text
+│   ├── util
+│   ├── widget
+│   └── win
+├── event
+├── gfx
+├── handle
+├── images
+│   └── screenshot.png
+├── INSTALL
+├── install-sh
+├── lib
+│   ├── cglm
+│   │   ├── autogen.sh
+│   │   ├── BUILDING.md
+│   │   ├── cglm.pc.in
+│   │   ├── cglm.png
+│   │   ├── cglm.podspec
+│   │   ├── CMakeLists.txt
+│   │   ├── configure.ac
+│   │   ├── _config.yml
+│   │   ├── CONTRIBUTING.md
+│   │   ├── CREDITS
+│   │   ├── docs
+│   │   │   ├── make.bat
+│   │   │   ├── requirements.txt
+│   │   │   └── source
+│   │   │       ├── aabb2d.rst
+│   │   │       ├── affine2d.rst
+│   │   │       ├── affine-common.rst
+│   │   │       ├── affine-mat.rst
+│   │   │       ├── affine-post.rst
+│   │   │       ├── affine-pre.rst
+│   │   │       ├── affine.rst
+│   │   │       ├── api_call.rst
+│   │   │       ├── api_inline_array.rst
+│   │   │       ├── api.rst
+│   │   │       ├── api_simd.rst
+│   │   │       ├── api_struct.rst
+│   │   │       ├── bezier.rst
+│   │   │       ├── box.rst
+│   │   │       ├── build.rst
+│   │   │       ├── call.rst
+│   │   │       ├── cam.rst
+│   │   │       ├── cglm-intro.png
+│   │   │       ├── color.rst
+│   │   │       ├── conf.py
+│   │   │       ├── curve.rst
+│   │   │       ├── euler.rst
+│   │   │       ├── features.rst
+│   │   │       ├── frustum.rst
+│   │   │       ├── getting_started.rst
+│   │   │       ├── index.rst
+│   │   │       ├── io.rst
+│   │   │       ├── ivec2.rst
+│   │   │       ├── ivec3.rst
+│   │   │       ├── ivec4.rst
+│   │   │       ├── mat2.rst
+│   │   │       ├── mat2x3.rst
+│   │   │       ├── mat2x4.rst
+│   │   │       ├── mat3.rst
+│   │   │       ├── mat3x2.rst
+│   │   │       ├── mat3x4.rst
+│   │   │       ├── mat4.rst
+│   │   │       ├── mat4x2.rst
+│   │   │       ├── mat4x3.rst
+│   │   │       ├── noise.rst
+│   │   │       ├── opengl.rst
+│   │   │       ├── opt.rst
+│   │   │       ├── plane.rst
+│   │   │       ├── project.rst
+│   │   │       ├── quat.rst
+│   │   │       ├── ray.rst
+│   │   │       ├── sphere.rst
+│   │   │       ├── sphinx-static
+│   │   │       │   └── theme_overrides.css
+│   │   │       ├── troubleshooting.rst
+│   │   │       ├── util.rst
+│   │   │       ├── vec2-ext.rst
+│   │   │       ├── vec2.rst
+│   │   │       ├── vec3-ext.rst
+│   │   │       ├── vec3.rst
+│   │   │       ├── vec4-ext.rst
+│   │   │       ├── vec4.rst
+│   │   │       └── version.rst
+│   │   ├── include
+│   │   │   ├── cglm
+│   │   │   │   ├── aabb2d.h
+│   │   │   │   ├── affine2d.h
+│   │   │   │   ├── affine2d-post.h
+│   │   │   │   ├── affine.h
+│   │   │   │   ├── affine-mat.h
+│   │   │   │   ├── affine-post.h
+│   │   │   │   ├── affine-pre.h
+│   │   │   │   ├── applesimd.h
+│   │   │   │   ├── bezier.h
+│   │   │   │   ├── box.h
+│   │   │   │   ├── call
+│   │   │   │   │   ├── aabb2d.h
+│   │   │   │   │   ├── affine2d.h
+│   │   │   │   │   ├── affine.h
+│   │   │   │   │   ├── bezier.h
+│   │   │   │   │   ├── box.h
+│   │   │   │   │   ├── cam.h
+│   │   │   │   │   ├── clipspace
+│   │   │   │   │   │   ├── ortho_lh_no.h
+│   │   │   │   │   │   ├── ortho_lh_zo.h
+│   │   │   │   │   │   ├── ortho_rh_no.h
+│   │   │   │   │   │   ├── ortho_rh_zo.h
+│   │   │   │   │   │   ├── persp_lh_no.h
+│   │   │   │   │   │   ├── persp_lh_zo.h
+│   │   │   │   │   │   ├── persp_rh_no.h
+│   │   │   │   │   │   ├── persp_rh_zo.h
+│   │   │   │   │   │   ├── project_no.h
+│   │   │   │   │   │   ├── project_zo.h
+│   │   │   │   │   │   ├── view_lh_no.h
+│   │   │   │   │   │   ├── view_lh_zo.h
+│   │   │   │   │   │   ├── view_rh_no.h
+│   │   │   │   │   │   └── view_rh_zo.h
+│   │   │   │   │   ├── curve.h
+│   │   │   │   │   ├── ease.h
+│   │   │   │   │   ├── euler.h
+│   │   │   │   │   ├── frustum.h
+│   │   │   │   │   ├── io.h
+│   │   │   │   │   ├── ivec2.h
+│   │   │   │   │   ├── ivec3.h
+│   │   │   │   │   ├── ivec4.h
+│   │   │   │   │   ├── mat2.h
+│   │   │   │   │   ├── mat2x3.h
+│   │   │   │   │   ├── mat2x4.h
+│   │   │   │   │   ├── mat3.h
+│   │   │   │   │   ├── mat3x2.h
+│   │   │   │   │   ├── mat3x4.h
+│   │   │   │   │   ├── mat4.h
+│   │   │   │   │   ├── mat4x2.h
+│   │   │   │   │   ├── mat4x3.h
+│   │   │   │   │   ├── noise.h
+│   │   │   │   │   ├── plane.h
+│   │   │   │   │   ├── project.h
+│   │   │   │   │   ├── quat.h
+│   │   │   │   │   ├── ray.h
+│   │   │   │   │   ├── sphere.h
+│   │   │   │   │   ├── vec2.h
+│   │   │   │   │   ├── vec3.h
+│   │   │   │   │   └── vec4.h
+│   │   │   │   ├── call.h
+│   │   │   │   ├── cam.h
+│   │   │   │   ├── cglm.h
+│   │   │   │   ├── clipspace
+│   │   │   │   │   ├── ortho_lh_no.h
+│   │   │   │   │   ├── ortho_lh_zo.h
+│   │   │   │   │   ├── ortho_rh_no.h
+│   │   │   │   │   ├── ortho_rh_zo.h
+│   │   │   │   │   ├── persp.h
+│   │   │   │   │   ├── persp_lh_no.h
+│   │   │   │   │   ├── persp_lh_zo.h
+│   │   │   │   │   ├── persp_rh_no.h
+│   │   │   │   │   ├── persp_rh_zo.h
+│   │   │   │   │   ├── project_no.h
+│   │   │   │   │   ├── project_zo.h
+│   │   │   │   │   ├── view_lh.h
+│   │   │   │   │   ├── view_lh_no.h
+│   │   │   │   │   ├── view_lh_zo.h
+│   │   │   │   │   ├── view_rh.h
+│   │   │   │   │   ├── view_rh_no.h
+│   │   │   │   │   └── view_rh_zo.h
+│   │   │   │   ├── color.h
+│   │   │   │   ├── common.h
+│   │   │   │   ├── curve.h
+│   │   │   │   ├── ease.h
+│   │   │   │   ├── euler.h
+│   │   │   │   ├── frustum.h
+│   │   │   │   ├── handed
+│   │   │   │   │   ├── euler_to_quat_lh.h
+│   │   │   │   │   └── euler_to_quat_rh.h
+│   │   │   │   ├── io.h
+│   │   │   │   ├── ivec2.h
+│   │   │   │   ├── ivec3.h
+│   │   │   │   ├── ivec4.h
+│   │   │   │   ├── mat2.h
+│   │   │   │   ├── mat2x3.h
+│   │   │   │   ├── mat2x4.h
+│   │   │   │   ├── mat3.h
+│   │   │   │   ├── mat3x2.h
+│   │   │   │   ├── mat3x4.h
+│   │   │   │   ├── mat4.h
+│   │   │   │   ├── mat4x2.h
+│   │   │   │   ├── mat4x3.h
+│   │   │   │   ├── noise.h
+│   │   │   │   ├── plane.h
+│   │   │   │   ├── project.h
+│   │   │   │   ├── quat.h
+│   │   │   │   ├── ray.h
+│   │   │   │   ├── simd
+│   │   │   │   │   ├── arm.h
+│   │   │   │   │   ├── avx
+│   │   │   │   │   │   ├── affine.h
+│   │   │   │   │   │   └── mat4.h
+│   │   │   │   │   ├── intrin.h
+│   │   │   │   │   ├── neon
+│   │   │   │   │   │   ├── affine.h
+│   │   │   │   │   │   ├── mat2.h
+│   │   │   │   │   │   ├── mat4.h
+│   │   │   │   │   │   └── quat.h
+│   │   │   │   │   ├── sse2
+│   │   │   │   │   │   ├── affine.h
+│   │   │   │   │   │   ├── mat2.h
+│   │   │   │   │   │   ├── mat3.h
+│   │   │   │   │   │   ├── mat4.h
+│   │   │   │   │   │   └── quat.h
+│   │   │   │   │   ├── wasm
+│   │   │   │   │   │   ├── affine.h
+│   │   │   │   │   │   ├── mat2.h
+│   │   │   │   │   │   ├── mat3.h
+│   │   │   │   │   │   ├── mat4.h
+│   │   │   │   │   │   └── quat.h
+│   │   │   │   │   ├── wasm.h
+│   │   │   │   │   └── x86.h
+│   │   │   │   ├── sphere.h
+│   │   │   │   ├── struct
+│   │   │   │   │   ├── aabb2d.h
+│   │   │   │   │   ├── affine2d.h
+│   │   │   │   │   ├── affine.h
+│   │   │   │   │   ├── affine-mat.h
+│   │   │   │   │   ├── affine-post.h
+│   │   │   │   │   ├── affine-pre.h
+│   │   │   │   │   ├── box.h
+│   │   │   │   │   ├── cam.h
+│   │   │   │   │   ├── clipspace
+│   │   │   │   │   │   ├── ortho_lh_no.h
+│   │   │   │   │   │   ├── ortho_lh_zo.h
+│   │   │   │   │   │   ├── ortho_rh_no.h
+│   │   │   │   │   │   ├── ortho_rh_zo.h
+│   │   │   │   │   │   ├── persp_lh_no.h
+│   │   │   │   │   │   ├── persp_lh_zo.h
+│   │   │   │   │   │   ├── persp_rh_no.h
+│   │   │   │   │   │   ├── persp_rh_zo.h
+│   │   │   │   │   │   ├── project_no.h
+│   │   │   │   │   │   ├── project_zo.h
+│   │   │   │   │   │   ├── view_lh_no.h
+│   │   │   │   │   │   ├── view_lh_zo.h
+│   │   │   │   │   │   ├── view_rh_no.h
+│   │   │   │   │   │   └── view_rh_zo.h
+│   │   │   │   │   ├── color.h
+│   │   │   │   │   ├── curve.h
+│   │   │   │   │   ├── euler.h
+│   │   │   │   │   ├── frustum.h
+│   │   │   │   │   ├── handed
+│   │   │   │   │   │   ├── euler_to_quat_lh.h
+│   │   │   │   │   │   └── euler_to_quat_rh.h
+│   │   │   │   │   ├── io.h
+│   │   │   │   │   ├── ivec2.h
+│   │   │   │   │   ├── ivec3.h
+│   │   │   │   │   ├── ivec4.h
+│   │   │   │   │   ├── mat2.h
+│   │   │   │   │   ├── mat2x3.h
+│   │   │   │   │   ├── mat2x4.h
+│   │   │   │   │   ├── mat3.h
+│   │   │   │   │   ├── mat3x2.h
+│   │   │   │   │   ├── mat3x4.h
+│   │   │   │   │   ├── mat4.h
+│   │   │   │   │   ├── mat4x2.h
+│   │   │   │   │   ├── mat4x3.h
+│   │   │   │   │   ├── noise.h
+│   │   │   │   │   ├── plane.h
+│   │   │   │   │   ├── project.h
+│   │   │   │   │   ├── quat.h
+│   │   │   │   │   ├── ray.h
+│   │   │   │   │   ├── sphere.h
+│   │   │   │   │   ├── vec2-ext.h
+│   │   │   │   │   ├── vec2.h
+│   │   │   │   │   ├── vec3-ext.h
+│   │   │   │   │   ├── vec3.h
+│   │   │   │   │   ├── vec4-ext.h
+│   │   │   │   │   └── vec4.h
+│   │   │   │   ├── struct.h
+│   │   │   │   ├── types.h
+│   │   │   │   ├── types-struct.h
+│   │   │   │   ├── util.h
+│   │   │   │   ├── vec2-ext.h
+│   │   │   │   ├── vec2.h
+│   │   │   │   ├── vec3-ext.h
+│   │   │   │   ├── vec3.h
+│   │   │   │   ├── vec4-ext.h
+│   │   │   │   ├── vec4.h
+│   │   │   │   └── version.h
+│   │   │   └── module.modulemap
+│   │   ├── LICENSE
+│   │   ├── Makefile.am
+│   │   ├── meson.build
+│   │   ├── meson_options.txt
+│   │   ├── Package.swift
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── aabb2d.c
+│   │   │   ├── affine2d.c
+│   │   │   ├── affine.c
+│   │   │   ├── bezier.c
+│   │   │   ├── box.c
+│   │   │   ├── cam.c
+│   │   │   ├── clipspace
+│   │   │   │   ├── ortho_lh_no.c
+│   │   │   │   ├── ortho_lh_zo.c
+│   │   │   │   ├── ortho_rh_no.c
+│   │   │   │   ├── ortho_rh_zo.c
+│   │   │   │   ├── persp_lh_no.c
+│   │   │   │   ├── persp_lh_zo.c
+│   │   │   │   ├── persp_rh_no.c
+│   │   │   │   ├── persp_rh_zo.c
+│   │   │   │   ├── project_no.c
+│   │   │   │   ├── project_zo.c
+│   │   │   │   ├── view_lh_no.c
+│   │   │   │   ├── view_lh_zo.c
+│   │   │   │   ├── view_rh_no.c
+│   │   │   │   └── view_rh_zo.c
+│   │   │   ├── config.h
+│   │   │   ├── curve.c
+│   │   │   ├── ease.c
+│   │   │   ├── euler.c
+│   │   │   ├── frustum.c
+│   │   │   ├── io.c
+│   │   │   ├── ivec2.c
+│   │   │   ├── ivec3.c
+│   │   │   ├── ivec4.c
+│   │   │   ├── mat2.c
+│   │   │   ├── mat2x3.c
+│   │   │   ├── mat2x4.c
+│   │   │   ├── mat3.c
+│   │   │   ├── mat3x2.c
+│   │   │   ├── mat3x4.c
+│   │   │   ├── mat4.c
+│   │   │   ├── mat4x2.c
+│   │   │   ├── mat4x3.c
+│   │   │   ├── noise.c
+│   │   │   ├── plane.c
+│   │   │   ├── project.c
+│   │   │   ├── quat.c
+│   │   │   ├── ray.c
+│   │   │   ├── sphere.c
+│   │   │   ├── swift
+│   │   │   │   └── empty.c
+│   │   │   ├── vec2.c
+│   │   │   ├── vec3.c
+│   │   │   └── vec4.c
+│   │   ├── test
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── include
+│   │   │   │   └── common.h
+│   │   │   ├── runner.c
+│   │   │   ├── src
+│   │   │   │   ├── test_aabb2d.h
+│   │   │   │   ├── test_affine2d.h
+│   │   │   │   ├── test_affine2d_post.h
+│   │   │   │   ├── test_affine.h
+│   │   │   │   ├── test_affine_mat.h
+│   │   │   │   ├── test_bezier.c
+│   │   │   │   ├── test_cam.h
+│   │   │   │   ├── test_cam_lh_no.h
+│   │   │   │   ├── test_cam_lh_zo.h
+│   │   │   │   ├── test_cam_rh_no.h
+│   │   │   │   ├── test_cam_rh_zo.h
+│   │   │   │   ├── test_clamp.c
+│   │   │   │   ├── test_common.c
+│   │   │   │   ├── test_common.h
+│   │   │   │   ├── test_euler.c
+│   │   │   │   ├── test_euler_to_quat_lh.h
+│   │   │   │   ├── test_euler_to_quat_rh.h
+│   │   │   │   ├── test_ivec2.h
+│   │   │   │   ├── test_ivec3.h
+│   │   │   │   ├── test_ivec4.h
+│   │   │   │   ├── test_mat2.h
+│   │   │   │   ├── test_mat2x3.h
+│   │   │   │   ├── test_mat2x4.h
+│   │   │   │   ├── test_mat3.h
+│   │   │   │   ├── test_mat3x2.h
+│   │   │   │   ├── test_mat3x4.h
+│   │   │   │   ├── test_mat4.h
+│   │   │   │   ├── test_mat4x2.h
+│   │   │   │   ├── test_mat4x3.h
+│   │   │   │   ├── test_noise.h
+│   │   │   │   ├── test_plane.h
+│   │   │   │   ├── test_project.h
+│   │   │   │   ├── test_quat.h
+│   │   │   │   ├── test_ray.h
+│   │   │   │   ├── tests.c
+│   │   │   │   ├── test_struct.c
+│   │   │   │   ├── test_vec2.h
+│   │   │   │   ├── test_vec3.h
+│   │   │   │   └── test_vec4.h
+│   │   │   └── tests.h
+│   │   └── win
+│   │       ├── build.bat
+│   │       ├── cglm.sln
+│   │       ├── cglm-test.vcxproj
+│   │       ├── cglm-test.vcxproj.filters
+│   │       ├── cglm.vcxproj
+│   │       └── cglm.vcxproj.filters
+│   ├── fast_obj
+│   │   ├── CMakeFiles
+│   │   ├── CMakeLists.txt
+│   │   ├── fast_obj.c
+│   │   ├── fast_obj.h
+│   │   ├── LICENSE
+│   │   ├── Makefile.am
+│   │   ├── README.md
+│   │   └── test
+│   │       ├── test.cpp
+│   │       └── tiny_obj_loader.h
+│   ├── freetype
+│   │   ├── autogen.sh
+│   │   ├── builds
+│   │   │   ├── amiga
+│   │   │   │   ├── include
+│   │   │   │   │   └── config
+│   │   │   │   │       ├── ftconfig.h
+│   │   │   │   │       └── ftmodule.h
+│   │   │   │   ├── makefile
+│   │   │   │   ├── makefile.os4
+│   │   │   │   ├── README
+│   │   │   │   ├── smakefile
+│   │   │   │   └── src
+│   │   │   │       └── base
+│   │   │   │           ├── ftdebug.c
+│   │   │   │           └── ftsystem.c
+│   │   │   ├── ansi
+│   │   │   │   ├── ansi-def.mk
+│   │   │   │   └── ansi.mk
+│   │   │   ├── atari
+│   │   │   │   ├── ATARI.H
+│   │   │   │   ├── deflinejoiner.awk
+│   │   │   │   ├── FNames.SIC
+│   │   │   │   ├── FREETYPE.PRJ
+│   │   │   │   ├── gen-purec-patch.sh
+│   │   │   │   └── README.TXT
+│   │   │   ├── beos
+│   │   │   │   ├── beos-def.mk
+│   │   │   │   ├── beos.mk
+│   │   │   │   └── detect.mk
+│   │   │   ├── cmake
+│   │   │   │   ├── FindBrotliDec.cmake
+│   │   │   │   ├── FindHarfBuzz.cmake
+│   │   │   │   ├── iOS.cmake
+│   │   │   │   └── testbuild.sh
+│   │   │   ├── compiler
+│   │   │   │   ├── ansi-cc.mk
+│   │   │   │   ├── bcc-dev.mk
+│   │   │   │   ├── bcc.mk
+│   │   │   │   ├── emx.mk
+│   │   │   │   ├── gcc-dev.mk
+│   │   │   │   ├── gcc.mk
+│   │   │   │   ├── intelc.mk
+│   │   │   │   ├── unix-lcc.mk
+│   │   │   │   ├── visualage.mk
+│   │   │   │   ├── visualc.mk
+│   │   │   │   ├── watcom.mk
+│   │   │   │   └── win-lcc.mk
+│   │   │   ├── detect.mk
+│   │   │   ├── dos
+│   │   │   │   ├── detect.mk
+│   │   │   │   ├── dos-def.mk
+│   │   │   │   ├── dos-emx.mk
+│   │   │   │   ├── dos-gcc.mk
+│   │   │   │   └── dos-wat.mk
+│   │   │   ├── exports.mk
+│   │   │   ├── freetype.mk
+│   │   │   ├── link_dos.mk
+│   │   │   ├── link_std.mk
+│   │   │   ├── mac
+│   │   │   │   ├── ascii2mpw.py
+│   │   │   │   ├── freetype-Info.plist
+│   │   │   │   ├── FreeType.m68k_cfm.make.txt
+│   │   │   │   ├── FreeType.m68k_far.make.txt
+│   │   │   │   ├── FreeType.ppc_carbon.make.txt
+│   │   │   │   ├── FreeType.ppc_classic.make.txt
+│   │   │   │   ├── ftlib.prj.xml
+│   │   │   │   ├── ftmac.c
+│   │   │   │   └── README
+│   │   │   ├── meson
+│   │   │   │   ├── extract_freetype_version.py
+│   │   │   │   ├── extract_libtool_version.py
+│   │   │   │   ├── generate_reference_docs.py
+│   │   │   │   ├── parse_modules_cfg.py
+│   │   │   │   └── process_ftoption_h.py
+│   │   │   ├── modules.mk
+│   │   │   ├── os2
+│   │   │   │   ├── detect.mk
+│   │   │   │   ├── os2-def.mk
+│   │   │   │   ├── os2-dev.mk
+│   │   │   │   └── os2-gcc.mk
+│   │   │   ├── plan9
+│   │   │   │   ├── p9lib.h
+│   │   │   │   └── README
+│   │   │   ├── symbian
+│   │   │   │   ├── bld.inf
+│   │   │   │   └── freetype.mmp
+│   │   │   ├── toplevel.mk
+│   │   │   ├── unix
+│   │   │   │   ├── ax_compare_version.m4
+│   │   │   │   ├── ax_prog_python_version.m4
+│   │   │   │   ├── ax_pthread.m4
+│   │   │   │   ├── configure.raw
+│   │   │   │   ├── detect.mk
+│   │   │   │   ├── freetype2.in
+│   │   │   │   ├── freetype2.m4
+│   │   │   │   ├── freetype-config.in
+│   │   │   │   ├── ftconfig.h.in
+│   │   │   │   ├── ft-munmap.m4
+│   │   │   │   ├── ftsystem.c
+│   │   │   │   ├── install.mk
+│   │   │   │   ├── pkg.m4
+│   │   │   │   ├── unix-cc.in
+│   │   │   │   ├── unixddef.mk
+│   │   │   │   ├── unix-def.in
+│   │   │   │   ├── unix-dev.mk
+│   │   │   │   ├── unix-lcc.mk
+│   │   │   │   └── unix.mk
+│   │   │   ├── vms
+│   │   │   │   ├── apinames_vms.bash
+│   │   │   │   ├── ftconfig.h
+│   │   │   │   ├── ftsystem.c
+│   │   │   │   └── patch_ftcalc.sed
+│   │   │   ├── wince
+│   │   │   │   ├── ftdebug.c
+│   │   │   │   ├── vc2005-ce
+│   │   │   │   │   ├── freetype.sln
+│   │   │   │   │   ├── freetype.vcproj
+│   │   │   │   │   └── index.html
+│   │   │   │   └── vc2008-ce
+│   │   │   │       ├── freetype.sln
+│   │   │   │       ├── freetype.vcproj
+│   │   │   │       └── index.html
+│   │   │   └── windows
+│   │   │       ├── detect.mk
+│   │   │       ├── ftdebug.c
+│   │   │       ├── ftsystem.c
+│   │   │       ├── vc2010
+│   │   │       │   ├── freetype.user.props
+│   │   │       │   ├── freetype.vcxproj
+│   │   │       │   ├── freetype.vcxproj.filters
+│   │   │       │   └── index.html
+│   │   │       ├── visualc
+│   │   │       │   ├── freetype.dsp
+│   │   │       │   ├── freetype.dsw
+│   │   │       │   ├── freetype.sln
+│   │   │       │   ├── freetype.vcproj
+│   │   │       │   └── index.html
+│   │   │       ├── visualce
+│   │   │       │   ├── freetype.dsp
+│   │   │       │   ├── freetype.dsw
+│   │   │       │   ├── freetype.vcproj
+│   │   │       │   └── index.html
+│   │   │       ├── w32-bccd.mk
+│   │   │       ├── w32-bcc.mk
+│   │   │       ├── w32-dev.mk
+│   │   │       ├── w32-gcc.mk
+│   │   │       ├── w32-icc.mk
+│   │   │       ├── w32-intl.mk
+│   │   │       ├── w32-lcc.mk
+│   │   │       ├── w32-mingw32.mk
+│   │   │       ├── w32-vcc.mk
+│   │   │       ├── w32-wat.mk
+│   │   │       └── win32-def.mk
+│   │   ├── CMakeFiles
+│   │   ├── CMakeLists.txt
+│   │   ├── configure
+│   │   ├── devel
+│   │   │   ├── ft2build.h
+│   │   │   └── ftoption.h
+│   │   ├── docs
+│   │   │   ├── CHANGES
+│   │   │   ├── CMAKE
+│   │   │   ├── CUSTOMIZE
+│   │   │   ├── DEBUG
+│   │   │   ├── DOCGUIDE
+│   │   │   ├── formats.txt
+│   │   │   ├── freetype-config.1
+│   │   │   ├── freetype-web.txt
+│   │   │   ├── FTL.TXT
+│   │   │   ├── GPLv2.TXT
+│   │   │   ├── INSTALL
+│   │   │   ├── INSTALL.ANY
+│   │   │   ├── INSTALL.CROSS
+│   │   │   ├── INSTALL.GNU
+│   │   │   ├── INSTALL.MAC
+│   │   │   ├── INSTALL.UNIX
+│   │   │   ├── INSTALL.VMS
+│   │   │   ├── MAKEPP
+│   │   │   ├── markdown
+│   │   │   │   ├── images
+│   │   │   │   │   └── favico.ico
+│   │   │   │   ├── javascripts
+│   │   │   │   │   └── extra.js
+│   │   │   │   └── stylesheets
+│   │   │   │       └── extra.css
+│   │   │   ├── oldlogs
+│   │   │   │   ├── ChangeLog.20
+│   │   │   │   ├── ChangeLog.21
+│   │   │   │   ├── ChangeLog.210
+│   │   │   │   ├── ChangeLog.22
+│   │   │   │   ├── ChangeLog.23
+│   │   │   │   ├── ChangeLog.24
+│   │   │   │   ├── ChangeLog.25
+│   │   │   │   ├── ChangeLog.26
+│   │   │   │   ├── ChangeLog.27
+│   │   │   │   ├── ChangeLog.28
+│   │   │   │   └── ChangeLog.29
+│   │   │   ├── PROBLEMS
+│   │   │   ├── raster.txt
+│   │   │   ├── README
+│   │   │   ├── release
+│   │   │   ├── TODO
+│   │   │   └── VERSIONS.TXT
+│   │   ├── include
+│   │   │   ├── freetype
+│   │   │   │   ├── config
+│   │   │   │   │   ├── ftconfig.h
+│   │   │   │   │   ├── ftheader.h
+│   │   │   │   │   ├── ftmodule.h
+│   │   │   │   │   ├── ftoption.h
+│   │   │   │   │   ├── ftstdlib.h
+│   │   │   │   │   ├── integer-types.h
+│   │   │   │   │   ├── mac-support.h
+│   │   │   │   │   └── public-macros.h
+│   │   │   │   ├── freetype.h
+│   │   │   │   ├── ftadvanc.h
+│   │   │   │   ├── ftbbox.h
+│   │   │   │   ├── ftbdf.h
+│   │   │   │   ├── ftbitmap.h
+│   │   │   │   ├── ftbzip2.h
+│   │   │   │   ├── ftcache.h
+│   │   │   │   ├── ftchapters.h
+│   │   │   │   ├── ftcid.h
+│   │   │   │   ├── ftcolor.h
+│   │   │   │   ├── ftdriver.h
+│   │   │   │   ├── fterrdef.h
+│   │   │   │   ├── fterrors.h
+│   │   │   │   ├── ftfntfmt.h
+│   │   │   │   ├── ftgasp.h
+│   │   │   │   ├── ftglyph.h
+│   │   │   │   ├── ftgxval.h
+│   │   │   │   ├── ftgzip.h
+│   │   │   │   ├── ftimage.h
+│   │   │   │   ├── ftincrem.h
+│   │   │   │   ├── ftlcdfil.h
+│   │   │   │   ├── ftlist.h
+│   │   │   │   ├── ftlogging.h
+│   │   │   │   ├── ftlzw.h
+│   │   │   │   ├── ftmac.h
+│   │   │   │   ├── ftmm.h
+│   │   │   │   ├── ftmodapi.h
+│   │   │   │   ├── ftmoderr.h
+│   │   │   │   ├── ftotval.h
+│   │   │   │   ├── ftoutln.h
+│   │   │   │   ├── ftparams.h
+│   │   │   │   ├── ftpfr.h
+│   │   │   │   ├── ftrender.h
+│   │   │   │   ├── ftsizes.h
+│   │   │   │   ├── ftsnames.h
+│   │   │   │   ├── ftstroke.h
+│   │   │   │   ├── ftsynth.h
+│   │   │   │   ├── ftsystem.h
+│   │   │   │   ├── fttrigon.h
+│   │   │   │   ├── fttypes.h
+│   │   │   │   ├── ftwinfnt.h
+│   │   │   │   ├── internal
+│   │   │   │   │   ├── autohint.h
+│   │   │   │   │   ├── cffotypes.h
+│   │   │   │   │   ├── cfftypes.h
+│   │   │   │   │   ├── compiler-macros.h
+│   │   │   │   │   ├── ftcalc.h
+│   │   │   │   │   ├── ftdebug.h
+│   │   │   │   │   ├── ftdrv.h
+│   │   │   │   │   ├── ftgloadr.h
+│   │   │   │   │   ├── fthash.h
+│   │   │   │   │   ├── ftmemory.h
+│   │   │   │   │   ├── ftmmtypes.h
+│   │   │   │   │   ├── ftobjs.h
+│   │   │   │   │   ├── ftpsprop.h
+│   │   │   │   │   ├── ftrfork.h
+│   │   │   │   │   ├── ftserv.h
+│   │   │   │   │   ├── ftstream.h
+│   │   │   │   │   ├── fttrace.h
+│   │   │   │   │   ├── ftvalid.h
+│   │   │   │   │   ├── psaux.h
+│   │   │   │   │   ├── pshints.h
+│   │   │   │   │   ├── services
+│   │   │   │   │   │   ├── svbdf.h
+│   │   │   │   │   │   ├── svcfftl.h
+│   │   │   │   │   │   ├── svcid.h
+│   │   │   │   │   │   ├── svfntfmt.h
+│   │   │   │   │   │   ├── svgldict.h
+│   │   │   │   │   │   ├── svgxval.h
+│   │   │   │   │   │   ├── svkern.h
+│   │   │   │   │   │   ├── svmetric.h
+│   │   │   │   │   │   ├── svmm.h
+│   │   │   │   │   │   ├── svotval.h
+│   │   │   │   │   │   ├── svpfr.h
+│   │   │   │   │   │   ├── svpostnm.h
+│   │   │   │   │   │   ├── svprop.h
+│   │   │   │   │   │   ├── svpscmap.h
+│   │   │   │   │   │   ├── svpsinfo.h
+│   │   │   │   │   │   ├── svsfnt.h
+│   │   │   │   │   │   ├── svttcmap.h
+│   │   │   │   │   │   ├── svtteng.h
+│   │   │   │   │   │   ├── svttglyf.h
+│   │   │   │   │   │   └── svwinfnt.h
+│   │   │   │   │   ├── sfnt.h
+│   │   │   │   │   ├── svginterface.h
+│   │   │   │   │   ├── t1types.h
+│   │   │   │   │   ├── tttypes.h
+│   │   │   │   │   └── wofftypes.h
+│   │   │   │   ├── otsvg.h
+│   │   │   │   ├── t1tables.h
+│   │   │   │   ├── ttnameid.h
+│   │   │   │   ├── tttables.h
+│   │   │   │   └── tttags.h
+│   │   │   └── ft2build.h
+│   │   ├── LICENSE.TXT
+│   │   ├── Makefile
+│   │   ├── meson.build
+│   │   ├── meson_options.txt
+│   │   ├── mkfile
+│   │   ├── modules.cfg
+│   │   ├── MSBuild.rsp
+│   │   ├── MSBuild.sln
+│   │   ├── objs
+│   │   │   └── README
+│   │   ├── README
+│   │   ├── README.git
+│   │   ├── src
+│   │   │   ├── autofit
+│   │   │   │   ├── afadjust.c
+│   │   │   │   ├── afadjust.h
+│   │   │   │   ├── afblue.c
+│   │   │   │   ├── afblue.cin
+│   │   │   │   ├── afblue.dat
+│   │   │   │   ├── afblue.h
+│   │   │   │   ├── afblue.hin
+│   │   │   │   ├── afcjk.c
+│   │   │   │   ├── afcjk.h
+│   │   │   │   ├── afcover.h
+│   │   │   │   ├── afdummy.c
+│   │   │   │   ├── afdummy.h
+│   │   │   │   ├── aferrors.h
+│   │   │   │   ├── afglobal.c
+│   │   │   │   ├── afglobal.h
+│   │   │   │   ├── afgsub.c
+│   │   │   │   ├── afgsub.h
+│   │   │   │   ├── afhints.c
+│   │   │   │   ├── afhints.h
+│   │   │   │   ├── afindic.c
+│   │   │   │   ├── afindic.h
+│   │   │   │   ├── aflatin.c
+│   │   │   │   ├── aflatin.h
+│   │   │   │   ├── afloader.c
+│   │   │   │   ├── afloader.h
+│   │   │   │   ├── afmodule.c
+│   │   │   │   ├── afmodule.h
+│   │   │   │   ├── afranges.c
+│   │   │   │   ├── afranges.h
+│   │   │   │   ├── afscript.h
+│   │   │   │   ├── afshaper.c
+│   │   │   │   ├── afshaper.h
+│   │   │   │   ├── afstyles.h
+│   │   │   │   ├── aftypes.h
+│   │   │   │   ├── afws-decl.h
+│   │   │   │   ├── afws-iter.h
+│   │   │   │   ├── autofit.c
+│   │   │   │   ├── ft-hb.c
+│   │   │   │   ├── ft-hb-decls.h
+│   │   │   │   ├── ft-hb-ft.c
+│   │   │   │   ├── ft-hb-ft.h
+│   │   │   │   ├── ft-hb.h
+│   │   │   │   ├── ft-hb-types.h
+│   │   │   │   ├── hb-script-list.h
+│   │   │   │   ├── module.mk
+│   │   │   │   └── rules.mk
+│   │   │   ├── base
+│   │   │   │   ├── ftadvanc.c
+│   │   │   │   ├── ftbase.c
+│   │   │   │   ├── ftbase.h
+│   │   │   │   ├── ftbbox.c
+│   │   │   │   ├── ftbdf.c
+│   │   │   │   ├── ftbitmap.c
+│   │   │   │   ├── ftcalc.c
+│   │   │   │   ├── ftcid.c
+│   │   │   │   ├── ftcolor.c
+│   │   │   │   ├── ftdbgmem.c
+│   │   │   │   ├── ftdebug.c
+│   │   │   │   ├── fterrors.c
+│   │   │   │   ├── ftfntfmt.c
+│   │   │   │   ├── ftfstype.c
+│   │   │   │   ├── ftgasp.c
+│   │   │   │   ├── ftgloadr.c
+│   │   │   │   ├── ftglyph.c
+│   │   │   │   ├── ftgxval.c
+│   │   │   │   ├── fthash.c
+│   │   │   │   ├── ftinit.c
+│   │   │   │   ├── ftlcdfil.c
+│   │   │   │   ├── ftmac.c
+│   │   │   │   ├── ftmm.c
+│   │   │   │   ├── ftobjs.c
+│   │   │   │   ├── ftotval.c
+│   │   │   │   ├── ftoutln.c
+│   │   │   │   ├── ftpatent.c
+│   │   │   │   ├── ftpfr.c
+│   │   │   │   ├── ftpsprop.c
+│   │   │   │   ├── ftrfork.c
+│   │   │   │   ├── ftsnames.c
+│   │   │   │   ├── ftstream.c
+│   │   │   │   ├── ftstroke.c
+│   │   │   │   ├── ftsynth.c
+│   │   │   │   ├── ftsystem.c
+│   │   │   │   ├── fttrigon.c
+│   │   │   │   ├── fttype1.c
+│   │   │   │   ├── ftutil.c
+│   │   │   │   ├── ftver.rc
+│   │   │   │   ├── ftwinfnt.c
+│   │   │   │   ├── md5.c
+│   │   │   │   ├── md5.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── bdf
+│   │   │   │   ├── bdf.c
+│   │   │   │   ├── bdfdrivr.c
+│   │   │   │   ├── bdfdrivr.h
+│   │   │   │   ├── bdferror.h
+│   │   │   │   ├── bdf.h
+│   │   │   │   ├── bdflib.c
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── README
+│   │   │   │   └── rules.mk
+│   │   │   ├── bzip2
+│   │   │   │   ├── ftbzip2.c
+│   │   │   │   └── rules.mk
+│   │   │   ├── cache
+│   │   │   │   ├── ftcache.c
+│   │   │   │   ├── ftcbasic.c
+│   │   │   │   ├── ftccache.c
+│   │   │   │   ├── ftccache.h
+│   │   │   │   ├── ftccback.h
+│   │   │   │   ├── ftccmap.c
+│   │   │   │   ├── ftcerror.h
+│   │   │   │   ├── ftcglyph.c
+│   │   │   │   ├── ftcglyph.h
+│   │   │   │   ├── ftcimage.c
+│   │   │   │   ├── ftcimage.h
+│   │   │   │   ├── ftcmanag.c
+│   │   │   │   ├── ftcmanag.h
+│   │   │   │   ├── ftcmru.c
+│   │   │   │   ├── ftcmru.h
+│   │   │   │   ├── ftcsbits.c
+│   │   │   │   ├── ftcsbits.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── cff
+│   │   │   │   ├── cff.c
+│   │   │   │   ├── cffcmap.c
+│   │   │   │   ├── cffcmap.h
+│   │   │   │   ├── cffdrivr.c
+│   │   │   │   ├── cffdrivr.h
+│   │   │   │   ├── cfferrs.h
+│   │   │   │   ├── cffgload.c
+│   │   │   │   ├── cffgload.h
+│   │   │   │   ├── cffload.c
+│   │   │   │   ├── cffload.h
+│   │   │   │   ├── cffobjs.c
+│   │   │   │   ├── cffobjs.h
+│   │   │   │   ├── cffparse.c
+│   │   │   │   ├── cffparse.h
+│   │   │   │   ├── cfftoken.h
+│   │   │   │   ├── module.mk
+│   │   │   │   └── rules.mk
+│   │   │   ├── cid
+│   │   │   │   ├── ciderrs.h
+│   │   │   │   ├── cidgload.c
+│   │   │   │   ├── cidgload.h
+│   │   │   │   ├── cidload.c
+│   │   │   │   ├── cidload.h
+│   │   │   │   ├── cidobjs.c
+│   │   │   │   ├── cidobjs.h
+│   │   │   │   ├── cidparse.c
+│   │   │   │   ├── cidparse.h
+│   │   │   │   ├── cidriver.c
+│   │   │   │   ├── cidriver.h
+│   │   │   │   ├── cidtoken.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   └── type1cid.c
+│   │   │   ├── dlg
+│   │   │   │   ├── dlgwrap.c
+│   │   │   │   └── rules.mk
+│   │   │   ├── gxvalid
+│   │   │   │   ├── gxvalid.c
+│   │   │   │   ├── gxvalid.h
+│   │   │   │   ├── gxvbsln.c
+│   │   │   │   ├── gxvcommn.c
+│   │   │   │   ├── gxvcommn.h
+│   │   │   │   ├── gxverror.h
+│   │   │   │   ├── gxvfeat.c
+│   │   │   │   ├── gxvfeat.h
+│   │   │   │   ├── gxvfgen.c
+│   │   │   │   ├── gxvjust.c
+│   │   │   │   ├── gxvkern.c
+│   │   │   │   ├── gxvlcar.c
+│   │   │   │   ├── gxvmod.c
+│   │   │   │   ├── gxvmod.h
+│   │   │   │   ├── gxvmort0.c
+│   │   │   │   ├── gxvmort1.c
+│   │   │   │   ├── gxvmort2.c
+│   │   │   │   ├── gxvmort4.c
+│   │   │   │   ├── gxvmort5.c
+│   │   │   │   ├── gxvmort.c
+│   │   │   │   ├── gxvmort.h
+│   │   │   │   ├── gxvmorx0.c
+│   │   │   │   ├── gxvmorx1.c
+│   │   │   │   ├── gxvmorx2.c
+│   │   │   │   ├── gxvmorx4.c
+│   │   │   │   ├── gxvmorx5.c
+│   │   │   │   ├── gxvmorx.c
+│   │   │   │   ├── gxvmorx.h
+│   │   │   │   ├── gxvopbd.c
+│   │   │   │   ├── gxvprop.c
+│   │   │   │   ├── gxvtrak.c
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── README
+│   │   │   │   └── rules.mk
+│   │   │   ├── gzip
+│   │   │   │   ├── adler32.c
+│   │   │   │   ├── crc32.c
+│   │   │   │   ├── crc32.h
+│   │   │   │   ├── ftgzip.c
+│   │   │   │   ├── ftzconf.h
+│   │   │   │   ├── gzguts.h
+│   │   │   │   ├── inffast.c
+│   │   │   │   ├── inffast.h
+│   │   │   │   ├── inffixed.h
+│   │   │   │   ├── inflate.c
+│   │   │   │   ├── inflate.h
+│   │   │   │   ├── inftrees.c
+│   │   │   │   ├── inftrees.h
+│   │   │   │   ├── patches
+│   │   │   │   │   └── freetype-zlib.diff
+│   │   │   │   ├── README.freetype
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── zlib.h
+│   │   │   │   ├── zutil.c
+│   │   │   │   └── zutil.h
+│   │   │   ├── hvf
+│   │   │   │   ├── hvf.c
+│   │   │   │   ├── hvfdrv.c
+│   │   │   │   ├── hvfdrv.h
+│   │   │   │   ├── hvferror.h
+│   │   │   │   ├── hvfload.c
+│   │   │   │   ├── hvfload.h
+│   │   │   │   ├── hvfobjs.c
+│   │   │   │   ├── hvfobjs.h
+│   │   │   │   ├── module.mk
+│   │   │   │   └── rules.mk
+│   │   │   ├── lzw
+│   │   │   │   ├── ftlzw.c
+│   │   │   │   ├── ftzopen.c
+│   │   │   │   ├── ftzopen.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── otvalid
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── otvalid.c
+│   │   │   │   ├── otvalid.h
+│   │   │   │   ├── otvbase.c
+│   │   │   │   ├── otvcommn.c
+│   │   │   │   ├── otvcommn.h
+│   │   │   │   ├── otverror.h
+│   │   │   │   ├── otvgdef.c
+│   │   │   │   ├── otvgpos.c
+│   │   │   │   ├── otvgpos.h
+│   │   │   │   ├── otvgsub.c
+│   │   │   │   ├── otvjstf.c
+│   │   │   │   ├── otvmath.c
+│   │   │   │   ├── otvmod.c
+│   │   │   │   ├── otvmod.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── pcf
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── pcf.c
+│   │   │   │   ├── pcfdrivr.c
+│   │   │   │   ├── pcfdrivr.h
+│   │   │   │   ├── pcferror.h
+│   │   │   │   ├── pcf.h
+│   │   │   │   ├── pcfread.c
+│   │   │   │   ├── pcfread.h
+│   │   │   │   ├── pcfutil.c
+│   │   │   │   ├── pcfutil.h
+│   │   │   │   ├── README
+│   │   │   │   └── rules.mk
+│   │   │   ├── pfr
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── pfr.c
+│   │   │   │   ├── pfrcmap.c
+│   │   │   │   ├── pfrcmap.h
+│   │   │   │   ├── pfrdrivr.c
+│   │   │   │   ├── pfrdrivr.h
+│   │   │   │   ├── pfrerror.h
+│   │   │   │   ├── pfrgload.c
+│   │   │   │   ├── pfrgload.h
+│   │   │   │   ├── pfrload.c
+│   │   │   │   ├── pfrload.h
+│   │   │   │   ├── pfrobjs.c
+│   │   │   │   ├── pfrobjs.h
+│   │   │   │   ├── pfrsbit.c
+│   │   │   │   ├── pfrsbit.h
+│   │   │   │   ├── pfrtypes.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── psaux
+│   │   │   │   ├── afmparse.c
+│   │   │   │   ├── afmparse.h
+│   │   │   │   ├── cffdecode.c
+│   │   │   │   ├── cffdecode.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── psarrst.c
+│   │   │   │   ├── psarrst.h
+│   │   │   │   ├── psaux.c
+│   │   │   │   ├── psauxerr.h
+│   │   │   │   ├── psauxmod.c
+│   │   │   │   ├── psauxmod.h
+│   │   │   │   ├── psblues.c
+│   │   │   │   ├── psblues.h
+│   │   │   │   ├── psconv.c
+│   │   │   │   ├── psconv.h
+│   │   │   │   ├── pserror.c
+│   │   │   │   ├── pserror.h
+│   │   │   │   ├── psfixed.h
+│   │   │   │   ├── psfont.c
+│   │   │   │   ├── psfont.h
+│   │   │   │   ├── psft.c
+│   │   │   │   ├── psft.h
+│   │   │   │   ├── psglue.h
+│   │   │   │   ├── pshints.c
+│   │   │   │   ├── pshints.h
+│   │   │   │   ├── psintrp.c
+│   │   │   │   ├── psintrp.h
+│   │   │   │   ├── psobjs.c
+│   │   │   │   ├── psobjs.h
+│   │   │   │   ├── psread.c
+│   │   │   │   ├── psread.h
+│   │   │   │   ├── psstack.c
+│   │   │   │   ├── psstack.h
+│   │   │   │   ├── pstypes.h
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── t1cmap.c
+│   │   │   │   ├── t1cmap.h
+│   │   │   │   ├── t1decode.c
+│   │   │   │   └── t1decode.h
+│   │   │   ├── pshinter
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── pshalgo.c
+│   │   │   │   ├── pshalgo.h
+│   │   │   │   ├── pshglob.c
+│   │   │   │   ├── pshglob.h
+│   │   │   │   ├── pshinter.c
+│   │   │   │   ├── pshmod.c
+│   │   │   │   ├── pshmod.h
+│   │   │   │   ├── pshnterr.h
+│   │   │   │   ├── pshrec.c
+│   │   │   │   ├── pshrec.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── psnames
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── psmodule.c
+│   │   │   │   ├── psmodule.h
+│   │   │   │   ├── psnamerr.h
+│   │   │   │   ├── psnames.c
+│   │   │   │   ├── pstables.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── raster
+│   │   │   │   ├── ftmisc.h
+│   │   │   │   ├── ftraster.c
+│   │   │   │   ├── ftraster.h
+│   │   │   │   ├── ftrend1.c
+│   │   │   │   ├── ftrend1.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── raster.c
+│   │   │   │   ├── rasterrs.h
+│   │   │   │   └── rules.mk
+│   │   │   ├── sdf
+│   │   │   │   ├── ftbsdf.c
+│   │   │   │   ├── ftsdf.c
+│   │   │   │   ├── ftsdfcommon.c
+│   │   │   │   ├── ftsdfcommon.h
+│   │   │   │   ├── ftsdferrs.h
+│   │   │   │   ├── ftsdf.h
+│   │   │   │   ├── ftsdfrend.c
+│   │   │   │   ├── ftsdfrend.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   └── sdf.c
+│   │   │   ├── sfnt
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── pngshim.c
+│   │   │   │   ├── pngshim.h
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── sfdriver.c
+│   │   │   │   ├── sfdriver.h
+│   │   │   │   ├── sferrors.h
+│   │   │   │   ├── sfnt.c
+│   │   │   │   ├── sfobjs.c
+│   │   │   │   ├── sfobjs.h
+│   │   │   │   ├── sfwoff2.c
+│   │   │   │   ├── sfwoff2.h
+│   │   │   │   ├── sfwoff.c
+│   │   │   │   ├── sfwoff.h
+│   │   │   │   ├── ttbdf.c
+│   │   │   │   ├── ttbdf.h
+│   │   │   │   ├── ttcmap.c
+│   │   │   │   ├── ttcmapc.h
+│   │   │   │   ├── ttcmap.h
+│   │   │   │   ├── ttcolr.c
+│   │   │   │   ├── ttcolr.h
+│   │   │   │   ├── ttcpal.c
+│   │   │   │   ├── ttcpal.h
+│   │   │   │   ├── ttgpos.c
+│   │   │   │   ├── ttgpos.h
+│   │   │   │   ├── ttkern.c
+│   │   │   │   ├── ttkern.h
+│   │   │   │   ├── ttload.c
+│   │   │   │   ├── ttload.h
+│   │   │   │   ├── ttmtx.c
+│   │   │   │   ├── ttmtx.h
+│   │   │   │   ├── ttpost.c
+│   │   │   │   ├── ttpost.h
+│   │   │   │   ├── ttsbit.c
+│   │   │   │   ├── ttsbit.h
+│   │   │   │   ├── ttsvg.c
+│   │   │   │   ├── ttsvg.h
+│   │   │   │   ├── woff2tags.c
+│   │   │   │   └── woff2tags.h
+│   │   │   ├── smooth
+│   │   │   │   ├── ftgrays.c
+│   │   │   │   ├── ftgrays.h
+│   │   │   │   ├── ftsmerrs.h
+│   │   │   │   ├── ftsmooth.c
+│   │   │   │   ├── ftsmooth.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   └── smooth.c
+│   │   │   ├── svg
+│   │   │   │   ├── ftsvg.c
+│   │   │   │   ├── ftsvg.h
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── svg.c
+│   │   │   │   └── svgtypes.h
+│   │   │   ├── tools
+│   │   │   │   ├── afblue.pl
+│   │   │   │   ├── apinames.c
+│   │   │   │   ├── chktrcmp.py
+│   │   │   │   ├── cordic.py
+│   │   │   │   ├── ftrandom
+│   │   │   │   │   ├── ftrandom.c
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── README
+│   │   │   │   ├── glnames.py
+│   │   │   │   ├── make_distribution_archives.py
+│   │   │   │   ├── no-copyright
+│   │   │   │   ├── test_afm.c
+│   │   │   │   ├── test_bbox.c
+│   │   │   │   ├── test_trig.c
+│   │   │   │   ├── update-copyright
+│   │   │   │   ├── update-copyright-year
+│   │   │   │   └── vms_shorten_symbol.c
+│   │   │   ├── truetype
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── truetype.c
+│   │   │   │   ├── ttdriver.c
+│   │   │   │   ├── ttdriver.h
+│   │   │   │   ├── tterrors.h
+│   │   │   │   ├── ttgload.c
+│   │   │   │   ├── ttgload.h
+│   │   │   │   ├── ttgxvar.c
+│   │   │   │   ├── ttgxvar.h
+│   │   │   │   ├── ttinterp.c
+│   │   │   │   ├── ttinterp.h
+│   │   │   │   ├── ttobjs.c
+│   │   │   │   ├── ttobjs.h
+│   │   │   │   ├── ttpload.c
+│   │   │   │   └── ttpload.h
+│   │   │   ├── type1
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── t1afm.c
+│   │   │   │   ├── t1afm.h
+│   │   │   │   ├── t1driver.c
+│   │   │   │   ├── t1driver.h
+│   │   │   │   ├── t1errors.h
+│   │   │   │   ├── t1gload.c
+│   │   │   │   ├── t1gload.h
+│   │   │   │   ├── t1load.c
+│   │   │   │   ├── t1load.h
+│   │   │   │   ├── t1objs.c
+│   │   │   │   ├── t1objs.h
+│   │   │   │   ├── t1parse.c
+│   │   │   │   ├── t1parse.h
+│   │   │   │   ├── t1tokens.h
+│   │   │   │   └── type1.c
+│   │   │   ├── type42
+│   │   │   │   ├── module.mk
+│   │   │   │   ├── rules.mk
+│   │   │   │   ├── t42drivr.c
+│   │   │   │   ├── t42drivr.h
+│   │   │   │   ├── t42error.h
+│   │   │   │   ├── t42objs.c
+│   │   │   │   ├── t42objs.h
+│   │   │   │   ├── t42parse.c
+│   │   │   │   ├── t42parse.h
+│   │   │   │   ├── t42types.h
+│   │   │   │   └── type42.c
+│   │   │   └── winfonts
+│   │   │       ├── fnterrs.h
+│   │   │       ├── module.mk
+│   │   │       ├── rules.mk
+│   │   │       ├── winfnt.c
+│   │   │       └── winfnt.h
+│   │   ├── subprojects
+│   │   │   ├── dlg
+│   │   │   │   ├── docs
+│   │   │   │   │   ├── api.md
+│   │   │   │   │   ├── changelog.md
+│   │   │   │   │   ├── dlg_android.c
+│   │   │   │   │   ├── examples
+│   │   │   │   │   │   ├── chain.c
+│   │   │   │   │   │   ├── example.c
+│   │   │   │   │   │   ├── example.cpp
+│   │   │   │   │   │   └── example.png
+│   │   │   │   │   ├── notes.md
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── core.c
+│   │   │   │   │   │   ├── cpp.cpp
+│   │   │   │   │   │   ├── disabled.c
+│   │   │   │   │   │   ├── disabled.cpp
+│   │   │   │   │   │   ├── level.c
+│   │   │   │   │   │   ├── meson.build
+│   │   │   │   │   │   ├── outputf.cpp
+│   │   │   │   │   │   └── threads.cpp
+│   │   │   │   │   └── todo.md
+│   │   │   │   ├── include
+│   │   │   │   │   └── dlg
+│   │   │   │   │       ├── dlg.h
+│   │   │   │   │       ├── dlg.hpp
+│   │   │   │   │       └── output.h
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── meson.build
+│   │   │   │   ├── meson_options.txt
+│   │   │   │   ├── README.md
+│   │   │   │   └── src
+│   │   │   │       └── dlg
+│   │   │   │           └── dlg.c
+│   │   │   ├── harfbuzz.wrap
+│   │   │   ├── libpng.wrap
+│   │   │   └── zlib.wrap
+│   │   ├── tests
+│   │   │   ├── issue-1063
+│   │   │   │   └── main.c
+│   │   │   ├── meson.build
+│   │   │   ├── README.md
+│   │   │   └── scripts
+│   │   │       └── download-test-fonts.py
+│   │   └── vms_make.com
+│   ├── glfw
+│   │   ├── CMake
+│   │   │   ├── cmake_uninstall.cmake.in
+│   │   │   ├── GenerateMappings.cmake
+│   │   │   ├── glfw3Config.cmake.in
+│   │   │   ├── glfw3.pc.in
+│   │   │   ├── i686-w64-mingw32-clang.cmake
+│   │   │   ├── i686-w64-mingw32.cmake
+│   │   │   ├── Info.plist.in
+│   │   │   ├── modules
+│   │   │   │   └── FindEpollShim.cmake
+│   │   │   ├── x86_64-w64-mingw32-clang.cmake
+│   │   │   └── x86_64-w64-mingw32.cmake
+│   │   ├── CMakeFiles
+│   │   ├── CMakeLists.txt
+│   │   ├── cmake_uninstall.cmake
+│   │   ├── CONTRIBUTORS.md
+│   │   ├── deps
+│   │   │   ├── getopt.c
+│   │   │   ├── getopt.h
+│   │   │   ├── glad
+│   │   │   │   ├── gles2.h
+│   │   │   │   ├── gl.h
+│   │   │   │   └── vulkan.h
+│   │   │   ├── linmath.h
+│   │   │   ├── nuklear_glfw_gl2.h
+│   │   │   ├── nuklear.h
+│   │   │   ├── stb_image_write.h
+│   │   │   ├── tinycthread.c
+│   │   │   ├── tinycthread.h
+│   │   │   └── wayland
+│   │   │       ├── fractional-scale-v1.xml
+│   │   │       ├── idle-inhibit-unstable-v1.xml
+│   │   │       ├── pointer-constraints-unstable-v1.xml
+│   │   │       ├── relative-pointer-unstable-v1.xml
+│   │   │       ├── viewporter.xml
+│   │   │       ├── wayland.xml
+│   │   │       ├── xdg-activation-v1.xml
+│   │   │       ├── xdg-decoration-unstable-v1.xml
+│   │   │       └── xdg-shell.xml
+│   │   ├── docs
+│   │   │   ├── build.md
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── compat.md
+│   │   │   ├── compile.md
+│   │   │   ├── context.md
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── Doxyfile.in
+│   │   │   ├── DoxygenLayout.xml
+│   │   │   ├── extra.css
+│   │   │   ├── extra.css.map
+│   │   │   ├── extra.scss
+│   │   │   ├── footer.html
+│   │   │   ├── header.html
+│   │   │   ├── input.md
+│   │   │   ├── internal.md
+│   │   │   ├── intro.md
+│   │   │   ├── main.md
+│   │   │   ├── monitor.md
+│   │   │   ├── moving.md
+│   │   │   ├── news.md
+│   │   │   ├── quick.md
+│   │   │   ├── spaces.svg
+│   │   │   ├── SUPPORT.md
+│   │   │   ├── vulkan.md
+│   │   │   └── window.md
+│   │   ├── examples
+│   │   │   ├── boing.c
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── gears.c
+│   │   │   ├── glfw.icns
+│   │   │   ├── glfw.ico
+│   │   │   ├── glfw.rc
+│   │   │   ├── heightmap.c
+│   │   │   ├── offscreen.c
+│   │   │   ├── particles.c
+│   │   │   ├── sharing.c
+│   │   │   ├── splitview.c
+│   │   │   ├── triangle-opengl.c
+│   │   │   ├── triangle-opengles.c
+│   │   │   ├── wave.c
+│   │   │   └── windows.c
+│   │   ├── include
+│   │   │   └── GLFW
+│   │   │       ├── glfw3.h
+│   │   │       └── glfw3native.h
+│   │   ├── LICENSE.md
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── CMakeFiles
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── cocoa_init.m
+│   │   │   ├── cocoa_joystick.h
+│   │   │   ├── cocoa_joystick.m
+│   │   │   ├── cocoa_monitor.m
+│   │   │   ├── cocoa_platform.h
+│   │   │   ├── cocoa_window.m
+│   │   │   ├── context.c
+│   │   │   ├── egl_context.c
+│   │   │   ├── glfw3Config.cmake
+│   │   │   ├── glfw3ConfigVersion.cmake
+│   │   │   ├── glfw3.pc
+│   │   │   ├── glfw.rc.in
+│   │   │   ├── glx_context.c
+│   │   │   ├── init.c
+│   │   │   ├── input.c
+│   │   │   ├── internal.h
+│   │   │   ├── linux_joystick.c
+│   │   │   ├── linux_joystick.h
+│   │   │   ├── macos_time.c
+│   │   │   ├── macos_time.h
+│   │   │   ├── mappings.h
+│   │   │   ├── mappings.h.in
+│   │   │   ├── monitor.c
+│   │   │   ├── nsgl_context.m
+│   │   │   ├── null_init.c
+│   │   │   ├── null_joystick.c
+│   │   │   ├── null_joystick.h
+│   │   │   ├── null_monitor.c
+│   │   │   ├── null_platform.h
+│   │   │   ├── null_window.c
+│   │   │   ├── osmesa_context.c
+│   │   │   ├── platform.c
+│   │   │   ├── platform.h
+│   │   │   ├── posix_module.c
+│   │   │   ├── posix_poll.c
+│   │   │   ├── posix_poll.h
+│   │   │   ├── posix_thread.c
+│   │   │   ├── posix_thread.h
+│   │   │   ├── posix_time.c
+│   │   │   ├── posix_time.h
+│   │   │   ├── vulkan.c
+│   │   │   ├── wgl_context.c
+│   │   │   ├── win32_init.c
+│   │   │   ├── win32_joystick.c
+│   │   │   ├── win32_joystick.h
+│   │   │   ├── win32_module.c
+│   │   │   ├── win32_monitor.c
+│   │   │   ├── win32_platform.h
+│   │   │   ├── win32_thread.c
+│   │   │   ├── win32_thread.h
+│   │   │   ├── win32_time.c
+│   │   │   ├── win32_time.h
+│   │   │   ├── win32_window.c
+│   │   │   ├── window.c
+│   │   │   ├── wl_init.c
+│   │   │   ├── wl_monitor.c
+│   │   │   ├── wl_platform.h
+│   │   │   ├── wl_window.c
+│   │   │   ├── x11_init.c
+│   │   │   ├── x11_monitor.c
+│   │   │   ├── x11_platform.h
+│   │   │   ├── x11_window.c
+│   │   │   └── xkb_unicode.c
+│   │   └── tests
+│   │       ├── allocator.c
+│   │       ├── clipboard.c
+│   │       ├── CMakeLists.txt
+│   │       ├── cursor.c
+│   │       ├── empty.c
+│   │       ├── events.c
+│   │       ├── gamma.c
+│   │       ├── glfwinfo.c
+│   │       ├── icon.c
+│   │       ├── iconify.c
+│   │       ├── inputlag.c
+│   │       ├── joysticks.c
+│   │       ├── monitors.c
+│   │       ├── msaa.c
+│   │       ├── reopen.c
+│   │       ├── tearing.c
+│   │       ├── threads.c
+│   │       ├── timeout.c
+│   │       ├── title.c
+│   │       ├── triangle-vulkan.c
+│   │       └── window.c
+│   ├── Makefile.am
+│   ├── stb
+│   │   └── stb_image.h
+│   └── VulkanMemoryAllocator
+│       ├── AGENTS.md
+│       ├── bin
+│       │   ├── Shader.frag.spv
+│       │   ├── Shader.vert.spv
+│       │   └── VmaSample_Release_vs2026.exe
+│       ├── build
+│       │   ├── CMakeCache.txt
+│       │   ├── CMakeFiles
+│       │   │   ├── 3.31.6
+│       │   │   │   ├── CMakeCXXCompiler.cmake
+│       │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│       │   │   │   ├── CMakeSystem.cmake
+│       │   │   │   └── CompilerIdCXX
+│       │   │   │       ├── a.out
+│       │   │   │       ├── CMakeCXXCompilerId.cpp
+│       │   │   │       └── tmp
+│       │   │   ├── cmake.check_cache
+│       │   │   ├── CMakeConfigureLog.yaml
+│       │   │   ├── CMakeDirectoryInformation.cmake
+│       │   │   ├── CMakeScratch
+│       │   │   ├── Export
+│       │   │   │   └── 8915d94c8ba9e0889cdde66125f3870b
+│       │   │   │       └── VulkanMemoryAllocatorConfig.cmake
+│       │   │   ├── Makefile2
+│       │   │   ├── Makefile.cmake
+│       │   │   ├── pkgRedirects
+│       │   │   ├── progress.marks
+│       │   │   └── TargetDirectories.txt
+│       │   ├── cmake_install.cmake
+│       │   ├── install
+│       │   │   ├── include
+│       │   │   │   └── vk_mem_alloc.h
+│       │   │   └── share
+│       │   │       └── cmake
+│       │   │           └── VulkanMemoryAllocator
+│       │   │               ├── VulkanMemoryAllocatorConfig.cmake
+│       │   │               └── VulkanMemoryAllocatorConfigVersion.cmake
+│       │   ├── install_manifest.txt
+│       │   ├── Makefile
+│       │   └── VulkanMemoryAllocatorConfigVersion.cmake
+│       ├── CHANGELOG.md
+│       ├── CMakeCache.txt
+│       ├── CMakeFiles
+│       │   ├── 3.31.6
+│       │   │   ├── CMakeCXXCompiler.cmake
+│       │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│       │   │   ├── CMakeSystem.cmake
+│       │   │   └── CompilerIdCXX
+│       │   │       ├── a.out
+│       │   │       ├── CMakeCXXCompilerId.cpp
+│       │   │       └── tmp
+│       │   ├── cmake.check_cache
+│       │   ├── CMakeConfigureLog.yaml
+│       │   ├── CMakeDirectoryInformation.cmake
+│       │   ├── CMakeScratch
+│       │   ├── Export
+│       │   │   └── 8915d94c8ba9e0889cdde66125f3870b
+│       │   │       └── VulkanMemoryAllocatorConfig.cmake
+│       │   ├── Makefile2
+│       │   ├── Makefile.cmake
+│       │   ├── pkgRedirects
+│       │   ├── progress.marks
+│       │   └── TargetDirectories.txt
+│       ├── cmake_install.cmake
+│       ├── CMakeLists.txt
+│       ├── docs
+│       │   ├── gfx
+│       │   │   ├── Aliasing.png
+│       │   │   ├── Linear_allocator_1_algo_default.png
+│       │   │   ├── Linear_allocator_2_algo_linear.png
+│       │   │   ├── Linear_allocator_3_free_at_once.png
+│       │   │   ├── Linear_allocator_4_stack.png
+│       │   │   ├── Linear_allocator_5_ring_buffer.png
+│       │   │   ├── Linear_allocator_7_double_stack.png
+│       │   │   ├── Margins_1.png
+│       │   │   ├── Margins_2.png
+│       │   │   └── VMA_class_diagram.png
+│       │   └── html
+│       │       ├── allocation_annotation.html
+│       │       ├── annotated.html
+│       │       ├── bc_sd.png
+│       │       ├── bc_s.png
+│       │       ├── choosing_memory_type.html
+│       │       ├── classes.html
+│       │       ├── clipboard.js
+│       │       ├── closed.png
+│       │       ├── codefolding.js
+│       │       ├── configuration.html
+│       │       ├── cookie.js
+│       │       ├── custom_memory_pools.html
+│       │       ├── debugging_memory_usage.html
+│       │       ├── defragmentation.html
+│       │       ├── deprecated.html
+│       │       ├── dir_d44c64559bbebec7f509842c48db8b23.html
+│       │       ├── docd.svg
+│       │       ├── doc.svg
+│       │       ├── doxygen_crawl.html
+│       │       ├── doxygen.css
+│       │       ├── doxygen.svg
+│       │       ├── dynsections.js
+│       │       ├── enabling_buffer_device_address.html
+│       │       ├── faq.html
+│       │       ├── files.html
+│       │       ├── folderclosedd.svg
+│       │       ├── folderclosed.svg
+│       │       ├── folderopend.svg
+│       │       ├── folderopen.svg
+│       │       ├── functions.html
+│       │       ├── functions_vars.html
+│       │       ├── general_considerations.html
+│       │       ├── globals_defs.html
+│       │       ├── globals_enum.html
+│       │       ├── globals_eval.html
+│       │       ├── globals_func.html
+│       │       ├── globals.html
+│       │       ├── globals_type.html
+│       │       ├── group__group__alloc.html
+│       │       ├── group__group__init.html
+│       │       ├── group__group__stats.html
+│       │       ├── group__group__virtual.html
+│       │       ├── index.html
+│       │       ├── jquery.js
+│       │       ├── memory_mapping.html
+│       │       ├── menudata.js
+│       │       ├── menu.js
+│       │       ├── minusd.svg
+│       │       ├── minus.svg
+│       │       ├── nav_fd.png
+│       │       ├── nav_f.png
+│       │       ├── nav_g.png
+│       │       ├── nav_hd.png
+│       │       ├── nav_h.png
+│       │       ├── navtree.css
+│       │       ├── open.png
+│       │       ├── other_api_interop.html
+│       │       ├── pages.html
+│       │       ├── plusd.svg
+│       │       ├── plus.svg
+│       │       ├── quick_start.html
+│       │       ├── resize.js
+│       │       ├── resource_aliasing.html
+│       │       ├── search
+│       │       │   ├── all_0.js
+│       │       │   ├── all_10.js
+│       │       │   ├── all_11.js
+│       │       │   ├── all_12.js
+│       │       │   ├── all_13.js
+│       │       │   ├── all_14.js
+│       │       │   ├── all_15.js
+│       │       │   ├── all_1.js
+│       │       │   ├── all_2.js
+│       │       │   ├── all_3.js
+│       │       │   ├── all_4.js
+│       │       │   ├── all_5.js
+│       │       │   ├── all_6.js
+│       │       │   ├── all_7.js
+│       │       │   ├── all_8.js
+│       │       │   ├── all_9.js
+│       │       │   ├── all_a.js
+│       │       │   ├── all_b.js
+│       │       │   ├── all_c.js
+│       │       │   ├── all_d.js
+│       │       │   ├── all_e.js
+│       │       │   ├── all_f.js
+│       │       │   ├── classes_0.js
+│       │       │   ├── close.svg
+│       │       │   ├── defines_0.js
+│       │       │   ├── enums_0.js
+│       │       │   ├── enumvalues_0.js
+│       │       │   ├── files_0.js
+│       │       │   ├── functions_0.js
+│       │       │   ├── groups_0.js
+│       │       │   ├── groups_1.js
+│       │       │   ├── groups_2.js
+│       │       │   ├── groups_3.js
+│       │       │   ├── groups_4.js
+│       │       │   ├── groups_5.js
+│       │       │   ├── mag_d.svg
+│       │       │   ├── mag_seld.svg
+│       │       │   ├── mag_sel.svg
+│       │       │   ├── mag.svg
+│       │       │   ├── pages_0.js
+│       │       │   ├── pages_10.js
+│       │       │   ├── pages_11.js
+│       │       │   ├── pages_12.js
+│       │       │   ├── pages_13.js
+│       │       │   ├── pages_14.js
+│       │       │   ├── pages_15.js
+│       │       │   ├── pages_1.js
+│       │       │   ├── pages_2.js
+│       │       │   ├── pages_3.js
+│       │       │   ├── pages_4.js
+│       │       │   ├── pages_5.js
+│       │       │   ├── pages_6.js
+│       │       │   ├── pages_7.js
+│       │       │   ├── pages_8.js
+│       │       │   ├── pages_9.js
+│       │       │   ├── pages_a.js
+│       │       │   ├── pages_b.js
+│       │       │   ├── pages_c.js
+│       │       │   ├── pages_d.js
+│       │       │   ├── pages_e.js
+│       │       │   ├── pages_f.js
+│       │       │   ├── search.css
+│       │       │   ├── searchdata.js
+│       │       │   ├── search.js
+│       │       │   ├── typedefs_0.js
+│       │       │   ├── typedefs_1.js
+│       │       │   ├── variables_0.js
+│       │       │   ├── variables_1.js
+│       │       │   ├── variables_2.js
+│       │       │   ├── variables_3.js
+│       │       │   ├── variables_4.js
+│       │       │   ├── variables_5.js
+│       │       │   ├── variables_6.js
+│       │       │   ├── variables_7.js
+│       │       │   ├── variables_8.js
+│       │       │   ├── variables_9.js
+│       │       │   ├── variables_a.js
+│       │       │   ├── variables_b.js
+│       │       │   └── variables_c.js
+│       │       ├── splitbard.png
+│       │       ├── splitbar.png
+│       │       ├── statistics.html
+│       │       ├── staying_within_budget.html
+│       │       ├── struct_vma_allocation_create_info.html
+│       │       ├── struct_vma_allocation_create_info-members.html
+│       │       ├── struct_vma_allocation.html
+│       │       ├── struct_vma_allocation_info2.html
+│       │       ├── struct_vma_allocation_info2-members.html
+│       │       ├── struct_vma_allocation_info.html
+│       │       ├── struct_vma_allocation_info-members.html
+│       │       ├── struct_vma_allocator_create_info.html
+│       │       ├── struct_vma_allocator_create_info-members.html
+│       │       ├── struct_vma_allocator.html
+│       │       ├── struct_vma_allocator_info.html
+│       │       ├── struct_vma_allocator_info-members.html
+│       │       ├── struct_vma_budget.html
+│       │       ├── struct_vma_budget-members.html
+│       │       ├── struct_vma_defragmentation_context.html
+│       │       ├── struct_vma_defragmentation_info.html
+│       │       ├── struct_vma_defragmentation_info-members.html
+│       │       ├── struct_vma_defragmentation_move.html
+│       │       ├── struct_vma_defragmentation_move-members.html
+│       │       ├── struct_vma_defragmentation_pass_move_info.html
+│       │       ├── struct_vma_defragmentation_pass_move_info-members.html
+│       │       ├── struct_vma_defragmentation_stats.html
+│       │       ├── struct_vma_defragmentation_stats-members.html
+│       │       ├── struct_vma_detailed_statistics.html
+│       │       ├── struct_vma_detailed_statistics-members.html
+│       │       ├── struct_vma_device_memory_callbacks.html
+│       │       ├── struct_vma_device_memory_callbacks-members.html
+│       │       ├── struct_vma_pool_create_info.html
+│       │       ├── struct_vma_pool_create_info-members.html
+│       │       ├── struct_vma_pool.html
+│       │       ├── struct_vma_statistics.html
+│       │       ├── struct_vma_statistics-members.html
+│       │       ├── struct_vma_total_statistics.html
+│       │       ├── struct_vma_total_statistics-members.html
+│       │       ├── struct_vma_virtual_allocation_create_info.html
+│       │       ├── struct_vma_virtual_allocation_create_info-members.html
+│       │       ├── struct_vma_virtual_allocation.html
+│       │       ├── struct_vma_virtual_allocation_info.html
+│       │       ├── struct_vma_virtual_allocation_info-members.html
+│       │       ├── struct_vma_virtual_block_create_info.html
+│       │       ├── struct_vma_virtual_block_create_info-members.html
+│       │       ├── struct_vma_virtual_block.html
+│       │       ├── struct_vma_vulkan_functions.html
+│       │       ├── struct_vma_vulkan_functions-members.html
+│       │       ├── sync_off.png
+│       │       ├── sync_on.png
+│       │       ├── tab_ad.png
+│       │       ├── tab_a.png
+│       │       ├── tab_bd.png
+│       │       ├── tab_b.png
+│       │       ├── tab_hd.png
+│       │       ├── tab_h.png
+│       │       ├── tabs.css
+│       │       ├── tab_sd.png
+│       │       ├── tab_s.png
+│       │       ├── topics.html
+│       │       ├── usage_patterns.html
+│       │       ├── virtual_allocator.html
+│       │       ├── vk_amd_device_coherent_memory.html
+│       │       ├── vk_ext_memory_priority.html
+│       │       ├── vk_khr_dedicated_allocation.html
+│       │       ├── vk_khr_external_memory_win32.html
+│       │       └── vk__mem__alloc_8h.html
+│       ├── Doxyfile
+│       ├── include
+│       │   └── vk_mem_alloc.h
+│       ├── LICENSE.txt
+│       ├── Makefile
+│       ├── media
+│       │   └── Thumbnail.png
+│       ├── README.md
+│       ├── src
+│       │   ├── CMakeLists.txt
+│       │   ├── Common.cpp
+│       │   ├── Common.h
+│       │   ├── Shaders
+│       │   │   ├── CMakeLists.txt
+│       │   │   ├── CompileShaders.bat
+│       │   │   ├── Shader.frag
+│       │   │   ├── Shader.vert
+│       │   │   └── SparseBindingTest.comp
+│       │   ├── SparseBindingTest.cpp
+│       │   ├── SparseBindingTest.h
+│       │   ├── Tests.cpp
+│       │   ├── Tests.h
+│       │   ├── vk_mem_alloc.natvis
+│       │   ├── VmaUsage.cpp
+│       │   ├── VmaUsage.h
+│       │   ├── VolkUsage.cpp
+│       │   └── VulkanSample.cpp
+│       ├── tools
+│       │   └── GpuMemDumpVis
+│       │       ├── GpuMemDump.schema.json
+│       │       ├── GpuMemDumpVis.py
+│       │       ├── README_files
+│       │       │   ├── ExampleOutput.png
+│       │       │   ├── Legend_Bkg.png
+│       │       │   ├── Legend_Buffer_1.png
+│       │       │   ├── Legend_Buffer_2.png
+│       │       │   ├── Legend_Buffer_3.png
+│       │       │   ├── Legend_Buffer_4.png
+│       │       │   ├── Legend_Details.png
+│       │       │   ├── Legend_Image_1.png
+│       │       │   ├── Legend_Image_2.png
+│       │       │   ├── Legend_Image_3.png
+│       │       │   ├── Legend_Image_4.png
+│       │       │   ├── Legend_Image_Linear.png
+│       │       │   ├── Legend_Image_Unknown.png
+│       │       │   └── Legend_Unknown.png
+│       │       ├── README.md
+│       │       └── Sample.json
+│       └── VulkanMemoryAllocatorConfigVersion.cmake
+├── libtool
+├── log
+├── ltmain.sh
+├── m4
+│   ├── libtool.m4
+│   ├── lt~obsolete.m4
+│   ├── ltoptions.m4
+│   ├── ltsugar.m4
+│   └── ltversion.m4
+├── Makefile
+├── Makefile.am
+├── Makefile.in
+├── mem
+├── missing
+├── NEWS
+├── output.txt
+├── prepare.sh
+├── README.md
+├── res
+├── resources
+│   ├── fonts
+│   │   ├── NotoSansArabic-Regular.ttf
+│   │   ├── NotoSans-BoldItalic.ttf
+│   │   ├── NotoSans-Bold.ttf
+│   │   ├── NotoSansCJK-Medium.ttc
+│   │   ├── NotoSansHebrew-Regular.ttf
+│   │   ├── NotoSans-Italic.ttf
+│   │   ├── NotoSans-Regular.ttf
+│   │   ├── sazanami-gothic.ttf
+│   │   └── TerminusTTF.ttf
+│   ├── teapot.obj
+│   └── vulkan_logo.png
+├── run.sh
+├── sphere
+├── src
+│   ├── CMakeFiles
+│   ├── CMakeLists.txt
+│   ├── engine
+│   │   ├── array.h
+│   │   ├── CMakeFiles
+│   │   ├── CMakeLists.txt
+│   │   ├── common.h
+│   │   ├── data_structs.c
+│   │   ├── engine.c
+│   │   ├── engine.h
+│   │   ├── event
+│   │   │   ├── event.c
+│   │   │   └── event.h
+│   │   ├── frame.h
+│   │   ├── gfx
+│   │   │   ├── camera.h
+│   │   │   ├── gfx.c
+│   │   │   ├── gfx.h
+│   │   │   ├── gfx_types.h
+│   │   │   ├── softbody
+│   │   │   │   ├── phash.c
+│   │   │   │   ├── phash.h
+│   │   │   │   ├── sbm.c
+│   │   │   │   ├── sbm.h
+│   │   │   │   ├── softbody.c
+│   │   │   │   ├── softbody.h
+│   │   │   │   ├── softbody_renderer.c
+│   │   │   │   ├── softbody_renderer.h
+│   │   │   │   ├── wireframe_renderer.c
+│   │   │   │   └── wireframe_renderer.h
+│   │   │   ├── teapot
+│   │   │   │   ├── teapot.c
+│   │   │   │   └── teapot.h
+│   │   │   ├── vk_device.c
+│   │   │   ├── vk_device.h
+│   │   │   ├── vk_instance.c
+│   │   │   ├── vk_instance.h
+│   │   │   ├── vk_swapchain.c
+│   │   │   ├── vk_swapchain.h
+│   │   │   ├── vk_util.c
+│   │   │   ├── vk_util.h
+│   │   │   ├── vma.cpp
+│   │   │   └── voxel
+│   │   │       ├── voxel_renderer.c
+│   │   │       └── voxel_renderer.h
+│   │   ├── global_data.h
+│   │   ├── handle
+│   │   │   ├── handle.c
+│   │   │   └── handle.h
+│   │   ├── log
+│   │   │   ├── log.c
+│   │   │   └── log.h
+│   │   ├── mem
+│   │   │   ├── arr.h
+│   │   │   ├── mem.c
+│   │   │   ├── mem.h
+│   │   │   └── sysmem.c
+│   │   ├── m_vec3.h
+│   │   ├── res
+│   │   │   ├── res.c
+│   │   │   └── res.h
+│   │   ├── sphere
+│   │   │   ├── icosahedron.c
+│   │   │   ├── icosahedron.h
+│   │   │   ├── icosphere.c
+│   │   │   ├── icosphere.h
+│   │   │   ├── sphere_renderer.c
+│   │   │   └── sphere_renderer.h
+│   │   ├── text
+│   │   │   ├── README.md
+│   │   │   ├── text_block.c
+│   │   │   ├── text_block.h
+│   │   │   ├── text_common.h
+│   │   │   ├── text_engine.c
+│   │   │   ├── text_engine.h
+│   │   │   ├── text_geometry.c
+│   │   │   ├── text_geometry.h
+│   │   │   ├── text.h
+│   │   │   ├── text_renderer.c
+│   │   │   └── text_renderer.h
+│   │   ├── types.h
+│   │   ├── util
+│   │   │   ├── file.c
+│   │   │   ├── file.h
+│   │   │   ├── ppm.c
+│   │   │   └── ppm.h
+│   │   ├── widget
+│   │   │   ├── nuklear_config.h
+│   │   │   ├── nuklear_glfw_vulkan.h
+│   │   │   ├── nuklear_glfw_vulkan.h.orig
+│   │   │   ├── nuklear.h
+│   │   │   ├── overview.c
+│   │   │   ├── widget.c
+│   │   │   ├── widget.h
+│   │   │   ├── widget_renderer_api.h
+│   │   │   ├── widget_renderer.c
+│   │   │   ├── widget_renderer.c.orig
+│   │   │   ├── widget_renderer.h
+│   │   │   ├── widget_renderer_helper.h
+│   │   │   └── widget_renderer.h.orig
+│   │   ├── widget_renderer_helper.h.old
+│   │   └── win
+│   │       ├── win.c
+│   │       └── win.h
+│   ├── game
+│   │   ├── CMakeFiles
+│   │   ├── CMakeLists.txt
+│   │   ├── freecam.c
+│   │   ├── freecam.h
+│   │   ├── input.c
+│   │   ├── input.c.orig
+│   │   ├── input.c.orig.orig
+│   │   ├── input.h
+│   │   ├── input.h.orig
+│   │   ├── input.h.orig.orig
+│   │   ├── main.c
+│   │   ├── term.c
+│   │   └── term.h
+│   └── glsl
+│       ├── nuklear.frag
+│       ├── nuklear.vert
+│       ├── softbody.frag
+│       ├── softbody.shadow.vert
+│       ├── softbody.vert
+│       ├── sphere.frag
+│       ├── sphere.vert
+│       ├── text.frag
+│       ├── text.vert
+│       ├── tri.frag
+│       ├── tri.vert
+│       ├── voxel_raymarch.frag
+│       ├── voxel_raymarch.vert
+│       ├── voxel.shadow.frag
+│       ├── voxel.shadow.frag.glsl
+│       ├── voxel.shadow.vert
+│       ├── widget.frag
+│       ├── widget.vert
+│       ├── wireframe.frag
+│       └── wireframe.vert
+├── stamp-h1
+├── util
+├── voxel_raymarch.frag
+├── voxel_raymarch.vert
+├── widget
+└── win
+
+303 directories, 2283 files

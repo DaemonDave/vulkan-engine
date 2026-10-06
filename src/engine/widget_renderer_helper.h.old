@@ -1,0 +1,121 @@
+#ifndef WIDGET_RENDERNER_HELPER_H
+#define WIDGET_RENDERNER_HELPER_H
+
+#ifndef NK_GLFW_TEXT_MAX
+#define NK_GLFW_TEXT_MAX 256
+#endif
+
+#ifndef NK_KEY_MAX
+#define NK_KEY_MAX 256
+#endif
+#ifndef NK_GLFW_DOUBLE_CLICK_LO
+#define NK_GLFW_DOUBLE_CLICK_LO 0.02
+#endif
+#ifndef NK_GLFW_DOUBLE_CLICK_HI
+#define NK_GLFW_DOUBLE_CLICK_HI 0.2
+#endif
+#ifndef NK_GLFW_MAX_TEXTURES
+#define NK_GLFW_MAX_TEXTURES 256
+#endif
+
+
+struct WidgetUniform
+{
+    mat4 ortho;
+};
+
+struct WidgetVertex
+{
+    float    pos  [2];
+    uint8_t  color[4];
+    uint16_t depth;
+};
+typedef Handle WidgetRendererHandle;
+ 
+//! to avoid define race conditions and extra files any needed pre-nuklear defines are made here  
+struct wr_vec2 {float x,y;};
+typedef int8_t wr_char;
+
+struct WidgetFrameData {
+    VkBuffer       uniform_buffer;
+    VmaAllocation  uniform_alloc;
+    void          *mapped_uniform;
+    VkDescriptorSet uniform_descriptor_set;
+
+    VkBuffer       vertex_buffer;
+    VmaAllocation  vertex_alloc;
+    void          *mapped_vertex;
+
+    VkBuffer       index_buffer;
+    VmaAllocation  index_alloc;
+    void          *mapped_index;
+
+    uint32_t max_vertex_buffer;
+    uint32_t max_element_buffer;
+};
+
+typedef struct nk_vulkan_texture_descriptor_set 
+{
+    VkImageView     image_view;
+    VkDescriptorSet descriptor_set;
+} NkVulkanTextureDescriptorSet;
+
+typedef struct WidgetRenderer {
+    //TextEngine engine;
+
+    struct nk_context    ctx;
+    struct nk_font_atlas atlas;
+    struct nk_buffer     cmds;
+    struct nk_draw_null_texture tex_null;
+
+    struct wr_vec2 fb_scale;
+    struct wr_vec2 scroll;
+
+    unsigned int text[NK_GLFW_TEXT_MAX];
+    wr_char key_events[NK_KEY_MAX];
+    int text_len;
+
+    double last_button_click;
+    int is_double_click_down;
+    struct wr_vec2 double_click_pos;
+    float delta_time_seconds_last;
+
+    /* Persistent widget state */
+    int demo_operation;
+    int compression;
+    struct nk_color background;
+
+    /* Application texture registered with Nuklear */
+    struct nk_image image;
+
+    VkPipeline pipeline;
+    VkPipelineLayout pipeline_layout;
+
+    VkDescriptorSetLayout uniform_descriptor_set_layout;
+    VkDescriptorSetLayout texture_descriptor_set_layout;
+
+    NkVulkanTextureDescriptorSet *texture_descriptor_sets;
+    uint32_t texture_descriptor_sets_len;
+    uint32_t texture_descriptor_sets_capacity;
+
+    VkImage font_image;
+    VmaAllocation font_alloc;
+    VkImageView font_image_view;
+    VkDescriptorSet font_descriptor_set;
+} WidgetRenderer;
+
+
+
+extern WidgetRenderer widget_renderer;
+
+
+Handle
+WidgetRendererInit(void);
+
+bool
+WidgetRendererLoop(void);
+
+static void
+WidgetRendererBuildWidgets(WidgetRenderer *renderer);
+
+#endif

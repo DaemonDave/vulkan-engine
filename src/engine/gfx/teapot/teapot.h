@@ -1,0 +1,54 @@
+#ifndef SRC_GAME_TEAPOT_TEAPOT_H
+#define SRC_GAME_TEAPOT_TEAPOT_H
+
+#include "gfx/gfx.h"
+#include "engine.h"
+
+struct SceneUBO {
+	mat4 view;
+	mat4 proj;
+};
+
+struct ObjectUBO {
+	mat4 model;
+} __attribute__ ((aligned ((256)))) ;
+
+
+struct TeapotRenderer {
+
+	struct TeapotFrameData {
+		uint32_t         object_num;
+		VkBuffer         object_buffer;
+		VmaAllocation    object_alloc;
+
+
+		VkDescriptorSet  scene_descriptor;
+		VkDescriptorSet  object_descriptor;
+
+		VkBuffer         uniform_buffer;
+		VmaAllocation    uniform_alloc;
+	} frame[VK_FRAMES];
+
+	VkDescriptorSetLayout          scene_layout;
+	VkDescriptorSetLayout          object_layout;
+
+	VkPipelineLayout               pipeline_layout;
+	VkPipeline                     pipeline;
+
+	VkBuffer                       vertex_buffer;
+	VmaAllocation                  vertex_alloc;
+
+	VkBuffer                       index_buffer;
+	VmaAllocation                  index_alloc;
+
+	VkImage                        texture_image;
+	VkImageView                    texture_view;
+	VmaAllocation                  texture_alloc;
+
+};
+
+uint32_t gfx_teapot_renderer_create(void);
+void     gfx_teapot_draw(struct Frame *);
+void     gfx_teapot_renderer_destroy(uint32_t);
+
+#endif /* SRC_GAME_TEAPOT_TEAPOT_H */

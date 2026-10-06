@@ -1,0 +1,157 @@
+#pragma once 
+
+#include "common.h"
+#include "gfx/gfx_types.h"
+#include "text/text_common.h"
+
+struct WidgetUniform {
+	mat4 ortho;
+};
+
+struct WidgetVertex {
+	float    pos  [2];
+	uint8_t  color[4];
+	uint16_t depth;
+};
+typedef Handle WidgetRenderer;
+
+struct vulkan_demo
+{
+    GLFWwindow *win;
+    VkInstance instance;
+    VkDebugUtilsMessengerEXT debug_messenger;
+    VkSurfaceKHR surface;
+    VkPhysicalDevice physical_device;
+    struct queue_family_indices indices;
+    VkDevice device;
+    VkQueue graphics_queue;
+    VkQueue present_queue;
+    VkSampler sampler;
+
+    VkSwapchainKHR swap_chain;
+    VkImage *swap_chain_images;
+    uint32_t swap_chain_images_len;
+    VkImageView *swap_chain_image_views;
+    VkFormat swap_chain_image_format;
+    VkExtent2D swap_chain_image_extent;
+
+    VkImage *overlay_images;
+    VkImageView *overlay_image_views;
+    VkDeviceMemory *overlay_image_memories;
+
+    VkRenderPass render_pass;
+    VkFramebuffer *framebuffers;
+    VkDescriptorSetLayout descriptor_set_layout;
+    VkDescriptorPool descriptor_pool;
+    VkDescriptorSet *descriptor_sets;
+    VkPipelineLayout pipeline_layout;
+    VkPipeline pipeline;
+    VkCommandPool command_pool;
+    VkCommandBuffer *command_buffers;
+    VkSemaphore *image_available;
+    VkSemaphore *render_finished;
+
+    VkImage demo_texture_image;
+    VkImageView demo_texture_image_view;
+    VkDeviceMemory demo_texture_memory;
+
+    VkFence *render_fence;
+    uint32_t current_in_flight_frame;
+
+    bool framebuffer_resized;
+};
+
+/*
+struct WidgetRenderer {
+
+	uint32_t quad_count;
+	uint32_t quad_max;
+
+	struct WidgetVertex *vertex_buffer;
+
+	TextEngine                     engine;
+
+	VkPipelineLayout               pipeline_layout;
+	VkPipeline                     pipeline;
+
+	VkBuffer                       index_buffer;
+	VmaAllocation                  index_alloc;
+
+	struct WidgetFrameData {
+		VkBuffer         vertex_buffer;
+		VmaAllocation    vertex_alloc;
+		void            *vertex_mapping;
+
+		uint32_t         index_count;
+	} frame[VK_FRAMES];
+	
+///
+//  DRE 2026 
+///	
+VkDescriptorSetLayout overlay_set_layout;
+//VkPipelineLayout pipeline_layout; // keep
+VkDescriptorPool overlay_desc_pool;
+VkDescriptorSet   overlay_desc_set;
+
+VkImageView  overlay_view;
+VkSampler     overlay_sampler;
+// You also need VkImage + VmaAllocation for the overlay image, not shown here.
+VkDescriptorSetLayout overlay_set_layout;
+
+
+VkImage        overlay_image;
+VmaAllocation  overlay_alloc;
+VkImageView    overlay_view;
+VkSampler      overlay_sampler;
+
+};
+*/
+
+struct WidgetRenderer {
+	// Per-frame widget mesh (if your old overlay rendered quads/triangles via vertex/index buffers)
+//	uint32_t quad_count;
+//	uint32_t quad_max;
+
+	struct WidgetVertex *vertex_buffer;
+	TextEngine engine;
+
+	// Nuklear/Vulkan overlay rendering resources
+	// (kept only the descriptors + image/sampler needed for sampling/compositing the overlay)
+	VkDescriptorSetLayout overlay_set_layout;
+	VkDescriptorPool       overlay_desc_pool;
+	VkDescriptorSet        overlay_desc_set;
+
+	// Overlay texture (the image Nuklear draws into, or that your old widget renderer sampled from)
+	VkImage        overlay_image;
+	VmaAllocation  overlay_alloc;
+	VkImageView    overlay_view;
+	VkSampler      overlay_sampler;
+
+	// If your Nuklear integration draws using vertex/index buffers instead of sampling an overlay texture,
+	// keep these; otherwise you can remove them.
+	VkBuffer         index_buffer;
+	VmaAllocation    index_alloc;
+
+	// Per-frame geometry buffers (only what’s needed to render widgets each frame)
+	struct WidgetFrameData {
+		VkBuffer      vertex_buffer;
+		VmaAllocation vertex_alloc;
+		void         *vertex_mapping;
+
+		uint32_t      index_count;
+	} frame[VK_FRAMES];
+};
+
+
+
+WidgetRenderer widget_renderer_create (void);
+void           widget_renderer_destroy(WidgetRenderer*);
+void           widget_renderer_clear  (WidgetRenderer);
+
+void  widget_renderer_quad(WidgetRenderer, 
+	int32_t, int32_t, int32_t, int32_t, 
+	uint16_t depth,
+	uint32_t color);
+
+void           widget_renderer_draw   (WidgetRenderer, struct Frame*);
+

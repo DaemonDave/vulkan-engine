@@ -1,0 +1,504 @@
+/*
+ * test_vulkan_structs.c
+ *
+ * Compile example:
+ *
+ *   cc -std=c11 -Wall -Wextra -Wpedantic \
+ *      test_vulkan_structs.c -o test_vulkan_structs
+ *
+ * This file assumes Vulkan and VMA declarations are available.
+ */
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <vulkan/vulkan.h>
+#include "vk_mem_alloc.h"
+
+
+/* ------------------------------------------------------------------------- */
+/* Logging interface                                                         */
+/* ------------------------------------------------------------------------- */
+
+enum LogLevel {
+    LOG_DEBUG,
+    LOG_INFO,
+    LOG_WARN,
+    LOG_ERROR,
+    LOG_CRITICAL
+};
+
+struct LogEvent {
+    enum LogLevel level;
+    const char   *message;
+};
+
+static const char *
+log_level_name(enum LogLevel level)
+{
+    switch (level) {
+    case LOG_DEBUG:    return "DEBUG";
+    case LOG_INFO:     return "INFO";
+    case LOG_WARN:     return "WARN";
+    case LOG_ERROR:    return "ERROR";
+    case LOG_CRITICAL: return "CRITICAL";
+    default:           return "UNKNOWN";
+    }
+}
+
+void _log(
+    enum LogLevel level,
+    const char *file,
+    const char *func,
+    int line,
+    const char *format,
+    ...
+)
+__attribute__((format(printf, 5, 6)));
+
+#include <stdarg.h>
+
+void
+_log(
+    enum LogLevel level,
+    const char *file,
+    const char *func,
+    int line,
+    const char *format,
+    ...
+)
+{
+    va_list args;
+
+    fprintf(
+        stderr,
+        "[%s] %s:%d %s(): ",
+        log_level_name(level),
+        file,
+        line,
+        func
+    );
+
+    va_start(args, format);
+    vfprintf(stderr, format, args);
+    va_end(args);
+
+    fputc('\n', stderr);
+}
+
+#define log_info(...) \
+    _log(LOG_INFO,     __FILE__, __func__, __LINE__, __VA_ARGS__)
+
+#define log_warn(...) \
+    _log(LOG_WARN,     __FILE__, __func__, __LINE__, __VA_ARGS__)
+
+#define log_error(...) \
+    _log(LOG_ERROR,    __FILE__, __func__, __LINE__, __VA_ARGS__)
+
+#define log_critical(...) \
+    _log(LOG_CRITICAL, __FILE__, __func__, __LINE__, __VA_ARGS__)
+
+#ifndef NDEBUG
+#define log_debug(...) \
+    _log(LOG_DEBUG,    __FILE__, __func__, __LINE__, __VA_ARGS__)
+#else
+#define log_debug(...) ((void)0)
+#endif
+
+
+/* ------------------------------------------------------------------------- */
+/* Structures under test                                                     */
+/* ------------------------------------------------------------------------- */
+
+typedef struct VkFrame {
+    uint32_t         id;
+
+    VkSemaphore      image_available;
+    VkSemaphore      render_finished;
+    VkFence          flight;
+
+    VkCommandPool    cmd_pool;
+    VkCommandBuffer  cmd_buf;
+
+    uint32_t         image_index;
+
+    /* DRE 2026 */
+    VkSemaphore      nk_render_finished;
+} VkFrame;
+
+typedef struct NkVkImage {
+    VkImage       image;
+    VmaAllocation allocation;
+    VkImageView   view;
+} NkVkImage;
+
+
+/* ------------------------------------------------------------------------- */
+/* Configuration                                                             */
+/* ------------------------------------------------------------------------- */
+
+/*
+ * Replace these values with the real renderer configuration.
+ */
+typedef struct VkTestConfig {
+    uint32_t swapchain_image_count;
+    uint32_t frame_count;
+
+    bool require_image_available;
+    bool require_render_finished;
+    bool require_flight_fence;
+    bool require_command_pool;
+    bool require_command_buffer;
+
+    /*
+     * The new semaphore introduced by the updated VkFrame structure.
+     */
+    bool require_nk_render_finished;
+
+    bool require_image_allocation;
+    bool require_image_view;
+} VkTestConfig;
+
+static const VkTestConfig default_config = {
+    .swapchain_image_count = 3,
+    .frame_count           = 2,
+
+    .require_image_available = true,
+    .require_render_finished = true,
+    .require_flight_fence     = true,
+    .require_command_pool     = true,
+    .require_command_buffer   = true,
+
+    .require_nk_render_finished = true,
+
+    .require_image_allocation = true,
+    .require_image_view       = true
+};
+
+
+/* ------------------------------------------------------------------------- */
+/* Compile-time layout checks                                                 */
+/* ------------------------------------------------------------------------- */
+
+_Static_assert(
+    offsetof(VkFrame, id) == 0,
+    "VkFrame.id must be the first member"
+);
+
+_Static_assert(
+    offsetof(VkFrame, nk_render_finished) >
+    offsetof(VkFrame, image_index),
+    "nk_render_finished must be after image_index"
+);
+
+_Static_assert(
+    offsetof(NkVkImage, image) == 0,
+    "NkVkImage.image must be the first member"
+);
+
+_Static_assert(
+    offsetof(NkVkImage, view) >
+    offsetof(NkVkImage, allocation),
+    "NkVkImage.view must follow allocation"
+);
+
+
+/* ------------------------------------------------------------------------- */
+/* Validation helpers                                                        */
+/* ------------------------------------------------------------------------- */
+
+static bool
+check_handle(
+    const char *name,
+    uint64_t handle,
+    bool required
+)
+{
+    if (!required) {
+        log_debug("%s is optional", name);
+        return true;
+    }
+
+    if (handle == VK_NULL_HANDLE) {
+        log_error("%s is VK_NULL_HANDLE", name);
+        return false;
+    }
+
+    log_debug("%s is valid", name);
+    return true;
+}
+
+static bool
+validate_vkframe(
+    const VkFrame *frame,
+    const VkTestConfig *config
+)
+{
+    bool ok = true;
+
+    if (frame == NULL) {
+        log_error("VkFrame pointer is NULL");
+        return false;
+    }
+
+    if (config == NULL) {
+        log_error("VkTestConfig pointer is NULL");
+        return false;
+    }
+
+    if (frame->id >= config->frame_count) {
+        log_error(
+            "VkFrame.id=%u is outside configured frame count=%u",
+            frame->id,
+            config->frame_count
+        );
+        ok = false;
+    }
+
+    if (frame->image_index >= config->swapchain_image_count) {
+        log_error(
+            "VkFrame.image_index=%u is outside configured swapchain "
+            "image count=%u",
+            frame->image_index,
+            config->swapchain_image_count
+        );
+        ok = false;
+    }
+
+    ok &= check_handle(
+        "VkFrame.image_available",
+        (uint64_t)frame->image_available,
+        config->require_image_available
+    );
+
+    ok &= check_handle(
+        "VkFrame.render_finished",
+        (uint64_t)frame->render_finished,
+        config->require_render_finished
+    );
+
+    ok &= check_handle(
+        "VkFrame.flight",
+        (uint64_t)frame->flight,
+        config->require_flight_fence
+    );
+
+    ok &= check_handle(
+        "VkFrame.cmd_pool",
+        (uint64_t)frame->cmd_pool,
+        config->require_command_pool
+    );
+
+    ok &= check_handle(
+        "VkFrame.cmd_buf",
+        (uint64_t)frame->cmd_buf,
+        config->require_command_buffer
+    );
+
+    ok &= check_handle(
+        "VkFrame.nk_render_finished",
+        (uint64_t)frame->nk_render_finished,
+        config->require_nk_render_finished
+    );
+
+    /*
+     * Semaphores should normally have distinct roles and handles.
+     */
+    if (frame->image_available != VK_NULL_HANDLE &&
+        frame->image_available == frame->render_finished) {
+        log_error(
+            "image_available and render_finished use the same semaphore"
+        );
+        ok = false;
+    }
+
+    if (frame->image_available != VK_NULL_HANDLE &&
+        frame->image_available == frame->nk_render_finished) {
+        log_error(
+            "image_available and nk_render_finished use the same semaphore"
+        );
+        ok = false;
+    }
+
+    if (frame->render_finished != VK_NULL_HANDLE &&
+        frame->render_finished == frame->nk_render_finished) {
+        log_warn(
+            "render_finished and nk_render_finished use the same semaphore"
+        );
+    }
+
+    if (ok) {
+        log_info("VkFrame %u passed validation", frame->id);
+    } else {
+        log_error("VkFrame %u failed validation", frame->id);
+    }
+
+    return ok;
+}
+
+static bool
+validate_nk_vk_image(
+    const NkVkImage *image,
+    const VkTestConfig *config
+)
+{
+    bool ok = true;
+
+    if (image == NULL) {
+        log_error("NkVkImage pointer is NULL");
+        return false;
+    }
+
+    if (config == NULL) {
+        log_error("VkTestConfig pointer is NULL");
+        return false;
+    }
+
+    ok &= check_handle(
+        "NkVkImage.image",
+        (uint64_t)image->image,
+        true
+    );
+
+    if (config->require_image_allocation &&
+        image->allocation == VK_NULL_HANDLE) {
+        log_error("NkVkImage.allocation is NULL");
+        ok = false;
+    }
+
+    ok &= check_handle(
+        "NkVkImage.view",
+        (uint64_t)image->view,
+        config->require_image_view
+    );
+
+    if (ok) {
+        log_info("NkVkImage passed validation");
+    } else {
+        log_error("NkVkImage failed validation");
+    }
+
+    return ok;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Structure configuration checks                                             */
+/* ------------------------------------------------------------------------- */
+
+static bool
+validate_structure_configuration(const VkTestConfig *config)
+{
+    bool ok = true;
+
+    if (config == NULL) {
+        log_error("Configuration is NULL");
+        return false;
+    }
+
+    if (config->frame_count == 0) {
+        log_error("frame_count must be greater than zero");
+        ok = false;
+    }
+
+    if (config->swapchain_image_count == 0) {
+        log_error("swapchain_image_count must be greater than zero");
+        ok = false;
+    }
+
+    if (config->require_nk_render_finished) {
+        log_info(
+            "Configuration requires VkFrame.nk_render_finished"
+        );
+    } else {
+        log_warn(
+            "VkFrame.nk_render_finished is present but not required "
+            "by configuration"
+        );
+    }
+
+    log_info(
+        "sizeof(VkFrame)=%zu, alignment=%zu",
+        sizeof(VkFrame),
+        _Alignof(VkFrame)
+    );
+
+    log_info(
+        "sizeof(NkVkImage)=%zu, alignment=%zu",
+        sizeof(NkVkImage),
+        _Alignof(NkVkImage)
+    );
+
+    return ok;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Test data                                                                  */
+/* ------------------------------------------------------------------------- */
+
+/*
+ * These fake handles are only for testing validation logic. They must never
+ * be submitted to Vulkan.
+ */
+static VkFrame
+make_test_frame(uint32_t id, uint32_t image_index)
+{
+    VkFrame frame = {
+        .id                 = id,
+        .image_available    = (VkSemaphore)0x1001,
+        .render_finished    = (VkSemaphore)0x1002,
+        .flight             = (VkFence)0x1003,
+        .cmd_pool           = (VkCommandPool)0x1004,
+        .cmd_buf            = (VkCommandBuffer)0x1005,
+        .image_index        = image_index,
+        .nk_render_finished = (VkSemaphore)0x1006
+    };
+
+    return frame;
+}
+
+static NkVkImage
+make_test_image(void)
+{
+    NkVkImage image = {
+        .image      = (VkImage)0x2001,
+        .allocation = (VmaAllocation)0x2002,
+        .view       = (VkImageView)0x2003
+    };
+
+    return image;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Main                                                                       */
+/* ------------------------------------------------------------------------- */
+
+int
+main(void)
+{
+    const VkTestConfig *config = &default_config;
+
+    VkFrame frame = make_test_frame(
+        0,
+        0
+    );
+
+    NkVkImage image = make_test_image();
+
+    bool config_ok = validate_structure_configuration(config);
+    bool frame_ok  = validate_vkframe(&frame, config);
+    bool image_ok  = validate_nk_vk_image(&image, config);
+
+    if (config_ok && frame_ok && image_ok) {
+        log_info("All Vulkan structure tests passed");
+        return EXIT_SUCCESS;
+    }
+
+    log_error("One or more Vulkan structure tests failed");
+    return EXIT_FAILURE;
+}
